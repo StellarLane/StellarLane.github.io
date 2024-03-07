@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="System Decal Notes#1BashBash is the language used in shell for Unix-like systems. It can be used through typing commands in a terminal or writing a script in a .sh format. Input, variables, output Bla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="System Decal Note 1">
+<meta property="og:url" content="https://stellarlane.github.io/2024/03/07/System%20Decal/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="System Decal Notes#1BashBash is the language used in shell for Unix-like systems. It can be used through typing commands in a terminal or writing a script in a .sh format. Input, variables, output Bla">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-03-07T14:40:06.421Z">
+<meta property="article:modified_time" content="2024-03-07T14:41:03.379Z">
+<meta property="article:author" content="StellarLane">
+<meta name="twitter:card" content="summary">
+
+
+<title >System Decal Note 1</title>
+
+<!-- Favicon -->
+
+    <link href='https://em-content.zobj.net/source/google/387/winking-face_1f609.png?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='https://em-content.zobj.net/source/google/387/winking-face_1f609.png?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='https://em-content.zobj.net/source/google/387/winking-face_1f609.png?v=2.1.10' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"stellarlane.github.io","author":"StellarLane","root":"/","typed_text":["Let it go as if you wander"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"https://em-content.zobj.net/source/skype/289/shooting-star_1f320.png","icon16":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","icon32":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","appleTouchIcon":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://em-content.zobj.net/source/google/387/pleading-face_1f97a.png","showText":"StellarLane's Blog","hideText":"喜欢您来，喜欢您再来>_<"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":""}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-07 22:41:03"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+</head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://em-content.zobj.net/source/skype/289/shooting-star_1f320.png">
+    
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友链
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://ooo.0x0.ooo/2024/02/26/OyAN0B.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Thanks for reading!
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            System Decal Note 1
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://ooo.0x0.ooo/2024/02/26/Oy7Zgg.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        StellarLane
+    </h5>
+    
+        <div class="trm-label">
+            
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/StellarLane" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+        <a href="https://steamcommunity.com/profiles/76561199518661334/" title="Steam" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-steam"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                City:
+            </div>
+            <div class="trm-label trm-label-light">
+                Shanghai
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                location:
+            </div>
+            <div class="trm-label trm-label-light">
+                SJTU, Minhang
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                Age:
+            </div>
+            <div class="trm-label trm-label-light">
+                18
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:stellarlane2@gmail.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/07
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            22:40
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            StellarLane
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="System-Decal-Notes-1"><a href="#System-Decal-Notes-1" class="headerlink" title="System Decal Notes#1"></a>System Decal Notes#1</h1><h2 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h2><p>Bash is the language used in shell for Unix-like systems. It can be used through typing commands in a terminal or writing a script in a .sh format.</p>
+<h3 id="Input-variables-output"><a href="#Input-variables-output" class="headerlink" title="Input, variables, output"></a>Input, variables, output</h3><ul>
+<li>Blankspaces matter! i.e. <code>VAR=1</code> can assign 1 to a variable called <code>VAR</code>, while <code>VAR = 1</code> will cause an error, for it will see <code>VAR</code> as a command, which is not. </li>
+<li><code>read</code> is the typical command to get an input.   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">read</span> &lt;input_var&gt; <span class="comment">#this will read the input and assign it to input_var</span></span><br><span class="line"><span class="built_in">read</span> -p <span class="string">&quot;some sort of prompt&quot;</span> &lt;input_var&gt; <span class="comment">#this will give show a prompt on the terminal and then accepts an input</span></span><br><span class="line"><span class="built_in">read</span> -s &lt;a_secret_input&gt; <span class="comment">#the input will not appear on the screen,used for sensitive inputs like password etc.</span></span><br></pre></td></tr></table></figure></li>
+<li>To create a file, <code>touch</code> is often used, and <code>echo</code> can be used to show an output on the terminal or put them in a file.  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;output&quot;</span> <span class="comment">#prints &quot;output&quot; on the terminal</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;output&quot;</span> &gt; afile.txt <span class="comment">#this will wipe out all the existing contents in afile.txt then write &quot;output&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;output&quot;</span> &gt;&gt; afile.txt <span class="comment">#this will add &quot;output&quot; to the tail of the file, not changing the contents already there.</span></span><br></pre></td></tr></table></figure></li>
+<li>In bash, you can’t get the value of a variable just by calling its name, such action will only return the name itself. An extra “$“ is needed to get the value of the variable. For example:  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">VAR=1</span><br><span class="line"><span class="built_in">echo</span> VAR <span class="comment">#prints &quot;VAR&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$VAR</span> <span class="comment">#prints 1</span></span><br></pre></td></tr></table></figure></li>
+<li>Bash perform commands, not expressions, so an <code>expr</code> is used when it’s doing expressions  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FOO=1</span><br><span class="line"><span class="variable">$FOO</span> + 1 <span class="comment">#error!</span></span><br><span class="line"><span class="built_in">expr</span> <span class="variable">$FOO</span> + 1 <span class="comment"># 2</span></span><br></pre></td></tr></table></figure></li>
+<li>Pipe <code>|</code> is a cool feature in Unix-like command, it can pass the result of the command before to the one after the pipe  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> file.txt | <span class="built_in">wc</span> -l</span><br><span class="line"><span class="comment">#cat can output the contents of file.txt</span></span><br><span class="line"><span class="comment">#pipe pass the contents to &quot;wc -l&quot;, which counts the line of the input</span></span><br></pre></td></tr></table></figure></li>
+<li>A lot of commands can be used to manipulate files, here are some of them  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&quot;&lt;a word you want to find&gt;&quot;</span> file.txt</span><br><span class="line"><span class="comment">#this will search the file.txt for the word you want to find and output the lines that has it</span></span><br><span class="line">sed -i <span class="string">&#x27;/pattern/d&#x27;</span> </span><br><span class="line"><span class="comment">#this is used to delete all the lines with &lt;pattern&gt;</span></span><br><span class="line">sed -i <span class="string">&#x27;s/old/new&#x27;</span></span><br><span class="line"><span class="comment">#this is used to change every &lt;old&gt; to &lt;new&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Conditions-and-controls"><a href="#Conditions-and-controls" class="headerlink" title="Conditions and controls"></a>Conditions and controls</h3><ul>
+<li>Just like other languages, bash also has <code>if</code> <code>while</code> and so on, but in bash <strong>0 is true and 1 is false</strong>.</li>
+<li>A simple example of <code>if</code>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;condition&gt;; <span class="keyword">then</span></span><br><span class="line">    &lt;code that run when condition is <span class="literal">true</span>&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;another condition&gt;; <span class="keyword">then</span></span><br><span class="line">    &lt;code&gt;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    &lt;code&gt;</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
+<li>A not-so-simple example of <code>case</code>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="variable">$condition</span> <span class="keyword">in</span></span><br><span class="line">    &lt;condition1&gt;)</span><br><span class="line">        &lt;code&gt;;; </span><br><span class="line">    &lt;condition2&gt;)</span><br><span class="line">        &lt;code&gt;;;</span><br><span class="line">    *) <span class="comment">#default</span></span><br><span class="line">        &lt;code&gt;;;</span><br><span class="line"><span class="keyword">esac</span> <span class="comment">#case reversed that is</span></span><br><span class="line"><span class="comment">#a real example</span></span><br><span class="line"><span class="built_in">read</span> -p <span class="string">&quot;type 1 or 2&quot;</span> input_var</span><br><span class="line"><span class="keyword">case</span> <span class="variable">$input_var</span> <span class="keyword">in</span></span><br><span class="line">    1)</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;you typed 1&quot;</span>;;</span><br><span class="line">    2) </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;you typed 2&quot;</span>;;</span><br><span class="line">    *)</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;you typed neither&quot;</span>;;  </span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></li>
+<li>You can use <code>test</code> or <code>[]</code> to judge whether the statement is true or false  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#$?means get the return value of the previous expression</span></span><br><span class="line"><span class="built_in">test</span> 1 = 1; <span class="built_in">echo</span> $? <span class="comment">#0</span></span><br><span class="line">[1 = 0]; <span class="built_in">echo</span> $? <span class="comment">#!</span></span><br></pre></td></tr></table></figure></li>
+<li>In bash,both “|| &amp;&amp;” and “-o -a” can be used to represent <code>and</code> and <code>or</code> , there are some really small differences  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">test</span> 1 = 1 &amp;&amp; 2 = 2; <span class="built_in">echo</span> $? <span class="comment">#this line will trigger an error because &quot;&amp;&amp;&quot; connects &quot;test 1 = 1&quot; with &quot;2 = 2&quot;, the second of which can not be understood</span></span><br><span class="line"><span class="built_in">test</span> 1 = 1 -a 2 = 2; <span class="built_in">echo</span> $? <span class="comment">#0</span></span><br><span class="line"><span class="built_in">test</span> 1 = 1 &amp;&amp; <span class="built_in">test</span> 2 = 2; <span class="built_in">echo</span> $? <span class="comment">#also 0</span></span><br><span class="line"><span class="built_in">test</span> 1 = 1 -a 2 = 2; <span class="built_in">echo</span> $? <span class="comment">#0 as well!</span></span><br></pre></td></tr></table></figure></li>
+<li>Like most language, <code>while</code> and <code>for</code> can be used to perform iteration  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> &lt;condition&gt;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    &lt;code&gt;</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> l <span class="keyword">in</span> &lt;list&gt;</span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">    &lt;code&gt;</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Writing-scripts"><a href="#Writing-scripts" class="headerlink" title="Writing scripts"></a>Writing scripts</h3><ul>
+<li>Bash can be used to write scripts with in <code>.sh</code> format. To run it, we usually need to add excution permission, then run it  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x script.sh</span><br><span class="line">bash script.sh <span class="comment">#or ./script.sh</span></span><br></pre></td></tr></table></figure></li>
+<li>Bash also has functions, which can make scripts simpler and more efficient.  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">functionname</span></span>()&#123;</span><br><span class="line">    &lt;code&gt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#or just</span></span><br><span class="line"><span class="function"><span class="title">functoinname</span></span>()&#123;</span><br><span class="line">    &lt;code&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Usually the computer don’t know how to excute a bash script, we need a special comment at the top of our scirpt, called “shebang”, to tell the computer use the bash interpreter to excute the script, a typical shebang for bash looks like  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br></pre></td></tr></table></figure>
+  this tells the system to excute the script using the bash shell in &#x2F;bin&#x2F;bash.Scripts written in other languages, like python, also need similar comments.</li>
+</ul>
+<h2 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h2><h3 id="Using-packages"><a href="#Using-packages" class="headerlink" title="Using packages"></a>Using packages</h3><p>When we use softwares on linux, most of the time we are using the packages of the software. typically it is made up of binaries, libraries and dependencies etc. In debian and systems derived from it(like ubuntu which is the system I am using now) packages are in .deb format.</p>
+<h4 id="Package-managers"><a href="#Package-managers" class="headerlink" title="Package managers"></a>Package managers</h4><p>We ususally perform actions on a package through a package manager, in debian <code>apt</code> and <code>dpkg</code> are the most common used package manager, <code>apk</code> is used under general circumstances while <code>dpkg</code> is used for insepect, fix, or performing local installs.<br>some common commands:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br><span class="line">sudo apt dist-upgrade</span><br><span class="line">sudo apt remove</span><br><span class="line">sudo apt install</span><br><span class="line">sudo dpkg -i <span class="comment">#install locally</span></span><br><span class="line">sudo dpkg --remove </span><br><span class="line">sudo dpkg --configure -a <span class="comment">#to reconfigure packages so it can be installed and run successfully </span></span><br><span class="line"><span class="comment"># the commands below usually don&#x27;t need to add a sudo command because they won&#x27;t change the system most of the time.</span></span><br><span class="line">dpkg -I</span><br><span class="line">apt policy <span class="comment">#listing all the versions of the package that can be downloaded</span></span><br><span class="line">apt show <span class="comment">#listing the basic information of the package including name, size, maintainers, depends etc.</span></span><br></pre></td></tr></table></figure>
+<p>there are some small differences between <code>upgrade</code> and <code>dist-upgrade</code>:<br>For most of the time <code>upgrade</code> can do the work, <code>upgrade</code> can find a “smart “ approach to upgrade a package without changing current installs, but this might fail under some circumstances, while <code>dist-upgrade</code> can change the current package in order to make the upgrade successful.<br>generally, dist-upgrade is more powerful and effective than upgrade, but also a little more dangerous to the system.</p>
+<h3 id="Making-packages"><a href="#Making-packages" class="headerlink" title="Making packages"></a>Making packages</h3><p>Suppose we have written a piece of code and we want it to actually run as a program, we need to make a package, one way to done this is through <code>gcc</code> and <code>fpm</code><br>gcc is a compiler to compile c&#x2F;cpp .etc code it’s used like</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc file.c -o file</span><br></pre></td></tr></table></figure>
+<p>which will turn a piece of source code to an executable, but it’s not a package yet, some more steps must be made.</p>
+<p>A compiled binary file itself is executable, a package will contain the file, but will also contain more (e.g. dependencies) to make it can easily be downloaded and then run on user’s computer. To make a package completely on oneself is quite painful, but there are tools, like the <code>fpm</code></p>
+<p>First we create a directory to store the package, say <code>mkdir -p packageoffile/usr/bin/</code> , in Debian including Ubuntu systems, we usually put user-level packages in <code>/usr/bin/</code> , then we move the compiled file to there by <code>mv file /packageoffile/user/bin/</code> then we create the package using <code>fpm</code> with the following commands</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fpm -s <span class="built_in">dir</span> -t deb -n file -v 1.0 -C packageoffile</span><br></pre></td></tr></table></figure>
+<p>the breakdown of the command above is like the system takes a directory called packageoffile, convert it into a .deb format package with the name “file” and the version is 1.0<br>Now this is a package which you can use dpkg to download it like</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i ./file_1.0_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>and we can run it just by</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hellopenguin</span><br></pre></td></tr></table></figure>
+<p>cool! just like a real package!<br>The package can then be used on all linux systems, while in windows the basic logic is the same but the tools used to compile and making packages are slightly different.</p>
+<h2 id="Service-and-process"><a href="#Service-and-process" class="headerlink" title="Service and process"></a>Service and process</h2><h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><p>Services are usually programs that run for a long time to provide support. Often service starts automatically and are usually controlled by systems, normally users won’t interact with services. </p>
+<p>Services usually have a file to list all the configerations they need to use, common configs like <code>ListenAddress</code> <code>Port</code> <code>LogFile</code> etc.</p>
+<p>Most of the time it’s not wise to run similar services at the same time, for example, there are two services called <code>nginx</code> and <code>httpd</code> , both are some sort of webserver, and both listened to port 80, which will confuse the system.</p>
+<p>Though users typically don’t mess up with services, but surely they can,one of the easiest way is to use <code>systemctl</code> commands</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop &lt;service&gt;</span><br><span class="line">systemctl start &lt;service&gt;</span><br><span class="line">systemctl restart &lt;service&gt;</span><br><span class="line">systemctl reload &lt;service&gt;</span><br><span class="line">systemctl <span class="built_in">enable</span> &lt;service&gt;</span><br><span class="line">systemctl <span class="built_in">disable</span> &lt;service&gt;</span><br><span class="line">systemctl <span class="comment">#shows all the services and their status</span></span><br></pre></td></tr></table></figure>
+<p>If you reload a service ,it will just reload the configs, but the service itself won’t stop, but if you restart a service, the service will stop first, then it will restart with new configs, not all services support <code>reload</code> , and if you reload a service that can’t be reloaded, it will automatically restart instead.</p>
+<h3 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h3><p>Processes are instances of programs. Each process has its own memory, thread, and a bunch of IDs (like its own process ID, its parent’s PID, the users ID etc.)</p>
+<p>A very special process is the <code>init</code> , which is the process start at boot with the PID 1, all other processes are its children or the children of children etc.</p>
+<p>To create a new process, we can use <code>fork</code> , which creates a new child process from a parent process, the child process has a new PID, while the parent’s PID remains the same.<code>fork</code> also has a return value, in child process it return 0 and in parent process it return the PID.</p>
+<p>To end a process, <code>exit()</code> <code>wait()</code> are often used. For a process to call <code>exit(n)</code> , then it will terminate and return n as the exit code to its parent process, n ranges for 0~255, usually 0 is success and the rest are may indicate that some situations have happened, and the parent process can use <code>wait()</code> receive the exit code for a child process, if the parent process calls <code>wait()</code> but no child processes are over yet , then the parent process will literally wait for a process to end, you can use <code>waitpid()</code> if you don’t want the wait to happen.</p>
+<p>Without proper use of <code>exit()</code> and <code>wait()</code> some bad things will happen, if a process has exited but the parent process don’t <code>wait()</code> for it, then the exit code and other data is remained to be collected, making it a zombie process, if there are too much of them, it might be resource leakage or else.On the other hand, if the parent process is in a hurry, exiting itself before all its children exit, then the remaining children will become orphan processes, and will be re-parented to the init process, then the init process will automatically reap them if they become orphans and zombies.</p>
+<p>Besides the process can exit themselves, there are signals sent from the kernal of the system, common signals include:</p>
+<ul>
+<li><code>SIGKILL</code> just kill a process immediately, before the process do anything else</li>
+<li><code>SIGTERM</code> let the process terminate, but the process is allowed to do some saving work before if finish ifself</li>
+<li><code>SIGINT</code> interrupt the process, often triggered by the user using Ctrl+C</li>
+<li><code>SIGHUP</code> happens when the user closes the terminal, the process running in there won’y br killed but hang up.</li>
+<li><code>SIGSTOP</code> <code>SIGCON</code> to stop and resume</li>
+</ul>
+<h4 id="Controlling-processes"><a href="#Controlling-processes" class="headerlink" title="Controlling processes"></a>Controlling processes</h4><p>There are several ways to list and manipulate the processes in the system,one way is through <code>ps</code>, which will show the process that is active. But it’s worth notice that normally <code>ps</code> only shows the processes active in its terminal, for example if you create a process, say <code>sleep 1000 &amp;</code> , this creates a sleep process that sleeps for 1000 seconds, with the <code>&amp;</code> , no other processes will be effected, then you type ps, and will show the <code>sleep</code> process. But if you open a new terminal and run <code>ps</code> on it you won’t actually find the <code>sleep</code> process. If you want to find all the processes not just in a certain terminal but for the whole user, <code>ps -u</code> is what you need.</p>
+<p>In the section before we mentioned signals, which can also be maually tirggered by command <code>kill</code> details are as follows</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> (-15) PID <span class="comment">#the default kill is actually SIGTERM not SIGKILL, this means send a SIGTERM to the process with the PID</span></span><br><span class="line"><span class="built_in">kill</span> -9 PID <span class="comment">#send a SIGKILL to the process with the PID</span></span><br><span class="line"><span class="built_in">kill</span> -STOP/-17 PID <span class="comment">#SIGSTOP</span></span><br><span class="line"><span class="built_in">kill</span> -CONT/-19 PID <span class="comment">#SIGCONT</span></span><br></pre></td></tr></table></figure>
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/02/26/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B0%8F%E8%AE%B0/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/Start/">
+                    Start
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/02/26/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B0%8F%E8%AE%B0/" class="trm-anima-link">
+                    搭建博客小记
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/02/26</li>
+                <li>17:59</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.1.1
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.1.10
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="System Decal Notes#1"><a rel="nofollow" class="trm-toc-link" href="#System-Decal-Notes-1"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">System Decal Notes#1</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="Bash"><a rel="nofollow" class="trm-toc-link" href="#Bash"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">Bash</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="Input, variables, output"><a rel="nofollow" class="trm-toc-link" href="#Input-variables-output"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">Input, variables, output</span></a></li><li class="trm-toc-item trm-toc-level-3" title="Conditions and controls"><a rel="nofollow" class="trm-toc-link" href="#Conditions-and-controls"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">Conditions and controls</span></a></li><li class="trm-toc-item trm-toc-level-3" title="Writing scripts"><a rel="nofollow" class="trm-toc-link" href="#Writing-scripts"><span class="trm-toc-number">1.1.3.</span> <span class="trm-toc-text">Writing scripts</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="Package"><a rel="nofollow" class="trm-toc-link" href="#Package"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">Package</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="Using packages"><a rel="nofollow" class="trm-toc-link" href="#Using-packages"><span class="trm-toc-number">1.2.1.</span> <span class="trm-toc-text">Using packages</span></a></li><li class="trm-toc-item trm-toc-level-3" title="Making packages"><a rel="nofollow" class="trm-toc-link" href="#Making-packages"><span class="trm-toc-number">1.2.2.</span> <span class="trm-toc-text">Making packages</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="Service and process"><a rel="nofollow" class="trm-toc-link" href="#Service-and-process"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">Service and process</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="Service"><a rel="nofollow" class="trm-toc-link" href="#Service"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text">Service</span></a></li><li class="trm-toc-item trm-toc-level-3" title="Process"><a rel="nofollow" class="trm-toc-link" href="#Process"><span class="trm-toc-number">1.3.2.</span> <span class="trm-toc-text">Process</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </div>
+
+            
+<div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.1.10"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.1.10"></script>
+
+</body>
+
+</html>
