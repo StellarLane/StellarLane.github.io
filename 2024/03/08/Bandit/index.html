@@ -7,16 +7,20 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="https://stellarlane.github.io/categories/System-Decal/index.html">
+<meta name="description" content="Bandit Level 0~15Sysadmin Decal是一门很棒的课程，但部分作业需要远程服务器，不对外开放。我参考csdiy的建议，完成了bandit前15个level，作为熟练相关指令的补充练习  level 0很简单，但我一直没打明白，不是端口号打成2200就是用户名漏打了个0就是地址labs打成了lab了，有点消愁了 1ssh -p 2220 bandit0@bandit.labs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bandit Level 0~15">
+<meta property="og:url" content="https://stellarlane.github.io/2024/03/08/Bandit/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="Bandit Level 0~15Sysadmin Decal是一门很棒的课程，但部分作业需要远程服务器，不对外开放。我参考csdiy的建议，完成了bandit前15个level，作为熟练相关指令的补充练习  level 0很简单，但我一直没打明白，不是端口号打成2200就是用户名漏打了个0就是地址labs打成了lab了，有点消愁了 1ssh -p 2220 bandit0@bandit.labs">
 <meta property="og:locale">
+<meta property="article:published_time" content="2024-03-08T14:32:44.202Z">
+<meta property="article:modified_time" content="2024-03-08T14:34:20.242Z">
 <meta property="article:author" content="StellarLane">
 <meta name="twitter:card" content="summary">
 
 
-
+<title >Bandit Level 0~15</title>
 
 <!-- Favicon -->
 
@@ -59,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"stellarlane.github.io","author":"StellarLane","root":"/","typed_text":["Let it go as if you wander"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"https://em-content.zobj.net/source/skype/289/shooting-star_1f320.png","icon16":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","icon32":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","appleTouchIcon":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://em-content.zobj.net/source/google/387/pleading-face_1f97a.png","showText":"StellarLane's Blog","hideText":"喜欢您来，喜欢您再来>_<"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":""}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-03-07 22:43:21"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-08 22:34:20"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -214,10 +218,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            
+                            Thanks for reading!
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Archives
+                            Bandit Level 0~15
                         </h1>
 
                         
@@ -227,7 +231,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        categories
+                                        2024
                                     </span>
                                 </li>
                             </ul>
@@ -342,73 +346,134 @@
             
             <div class="trm-page-content col-lg-8">
                 <div id="trm-content" class="trm-content">
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list"><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/Start/">Start</a><span class="category-list-count">（2）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/System-Decal/">System Decal</a><span class="category-list-count">（1）</span></li></ul>
-                
-            </div>
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/08
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            22:32
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            StellarLane
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="Bandit-Level-0-15"><a href="#Bandit-Level-0-15" class="headerlink" title="Bandit Level 0~15"></a>Bandit Level 0~15</h1><p>Sysadmin Decal是一门很棒的课程，但部分作业需要远程服务器，不对外开放。我参考csdiy的建议，完成了bandit前15个level，作为熟练相关指令的补充练习</p>
+<ul>
+<li><p>level 0<br>很简单，但我一直没打明白，不是端口号打成2200就是用户名漏打了个0就是地址labs打成了lab了，有点消愁了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 2220 bandit0@bandit.labs.overthewire.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>level 1<br>  使用 <code>ls</code> 即可发现一个readme文档，使用 <code>cat</code> 打开即可得到密码</p>
+</li>
+<li><p>level 2<br>  本关即是让你打开一个文件名为“-”的文档，直接输入会被当做参数标志，可以使用相对路径打开</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ./- <span class="comment">#此处.即为当前directory</span></span><br></pre></td></tr></table></figure></li>
+<li><p>level 3<br>  本关让你打开一个文档名中有空格的文档，直接输入可能只会读入文档的第一个单词，需要使用引号把整个文档名括在一起</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> <span class="string">&quot;spaces in this filename&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>level 4<br>  本关需要打开一个不能被ls找出的文件（实现方式是将文件名用.开头即可），我是用的find找到了隐藏的文件</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find -<span class="built_in">type</span> f</span><br><span class="line"><span class="comment"># ./.hidden</span></span><br><span class="line"><span class="built_in">cat</span> .hidden</span><br></pre></td></tr></table></figure>
+<p>  当然用<code>ls -a</code>也可以找到对应的文件</p>
+</li>
+<li><p>level 5<br>  inhere中有多个文件，需要找到由ASCII编码的那个，可以使用file做到</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file ./-file00 <span class="comment">#知识点复习，用相对路径找带-的文件</span></span><br><span class="line"><span class="comment">#data</span></span><br><span class="line">...</span><br><span class="line">file ./-file07</span><br><span class="line"><span class="comment">#ASCII, that&#x27;s it!</span></span><br></pre></td></tr></table></figure>
+<p>  也可以使用 <code>file ./*</code> 一次性看完</p>
+</li>
+<li><p>level 6<br>只需要第二个条件就可以找到唯一满足的文件了</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -size 1033c</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>level 7<br>find 同样支持按user和group查找</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -user bandit6 -group bandit7 -size 33c</span><br></pre></td></tr></table></figure>
+<p>  他会有一大长串搜索结果，要肉眼遍历找到其中一个叫“password”的文件</p>
+</li>
+<li><p>level 8<br>  简单的grep函数应用</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&quot;millionth&quot;</span> data.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>level 9<br>  sort可以按一定顺序排序（一般默认就可以），uniq可以检查某行和它上下相邻的行是否相同，若相同则删除重复行，此处可以加入额外参数 -u，使只输出在初始时便只有一行的数据。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span> data.txt | <span class="built_in">uniq</span> -u</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>level 10<br>  strings可以从二进制文件中提取可打印的字符，然后用grep”&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;”来筛选出密码（但我看这文件也不长，人工识别找密码也不是不行×）</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings data.txt | grep <span class="string">&quot;=====&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>level 11<br>  知道base64基本解码指令即可</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">base64</span> -d data.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>level 12<br>  此处需要介绍tr， tr可以接收两个字母表，将识别输入中每个字母在第一个字母表中的位置，并转化为第二个字母表中对应位置的字母</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> data.txt | <span class="built_in">tr</span> <span class="string">&#x27;a-zA-Z&#x27;</span> <span class="string">&#x27;n-za-mN-ZA-M&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>level 13<br>  真是一场酣畅淋漓的赤石啊，你们有这样的压缩吗，真是压压又缩缩啊<br>  本题先有一个16进制文件，用xxd解析之后就开始用bzip，gzip，tar反复解压</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 只列出部分所需代码</span></span><br><span class="line">xxd -r data data.output <span class="comment">#将原16进制解析成新的data.out文档</span></span><br><span class="line">file data <span class="comment">#确定当前格式，决定下次解压所需指令</span></span><br><span class="line"><span class="built_in">mv</span> data data.gz</span><br><span class="line">gzip -d data.gz <span class="comment">#gzip解压，之后再用list可看见新的文档data将data.gz替代，然后重复解压步骤</span></span><br><span class="line"><span class="built_in">mv</span> data data.bz2</span><br><span class="line">bunzip2 -d data.bz2 <span class="comment">#bunzip2解压</span></span><br><span class="line"><span class="built_in">mv</span> data data.tar</span><br><span class="line">tar -xdv data.tar <span class="comment">#tar解压</span></span><br></pre></td></tr></table></figure>
+<p>  反复解压多次偶得到一ASCII文件，即可得到密码</p>
+<blockquote>
+<p>wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw</p>
+</blockquote>
+</li>
+<li><p>level 14<br>  本题介绍了使用私钥文件而非密码进行连接的方法</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -i ./sshkey.private bandit14@localhost -p2220</span><br><span class="line"><span class="comment">#此处“-i ./sshkey.private”即代表通过私钥的方式登入位于localhost的2220端口处的bandit14用户</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq</p>
+</blockquote>
+</li>
+<li><p>level 15<br>  本题需要将密码发送至30000端口，比较简单的方法是使用nc</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc localhost 30000</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-<!-- history -->
+</article>
+    
+    
 
-<div class="row">
+</div>
+<div class="trm-post-next-prev row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                System Decal
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/03/07/System%20Decal/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/03/07/System%20Decal/" class="trm-anima-link">
-                                        System Decal Note 1
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">03/07</li>
-                                        <li class="trm-accent-color">22:40</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/Sysadmin-Decal/">
+                    Sysadmin Decal
+                </a>
             </div>
-            
+            <h5>
+                <a href="/2024/03/07/System%20Decal/" class="trm-anima-link">
+                    Sysadmin Decal Note 1
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/03/07</li>
+                <li>22:40</li>
+                
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -450,9 +515,29 @@
 
             
 
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Bandit Level 0~15"><a rel="nofollow" class="trm-toc-link" href="#Bandit-Level-0-15"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Bandit Level 0~15</span></a></li></ol>
+      </div>
+    </div>
+
             
 <div class="trm-fixed-container">
     
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
     <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
@@ -487,6 +572,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
