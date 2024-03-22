@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="Data100 Note 1Lab112import numpy as npimport matplotlib.pyplot as plt  numpy基础 1234567np.array(list) #根据一个默认list输出一个numpy数组np.arange(a,b,c) #构建一个范围为[a,b),步长为c的数组np.arrange(1,5,2) #&gt;&gt;&gt;[1 3])np">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data100 Note 1">
+<meta property="og:url" content="https://stellarlane.github.io/2024/03/22/Data100N1/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="Data100 Note 1Lab112import numpy as npimport matplotlib.pyplot as plt  numpy基础 1234567np.array(list) #根据一个默认list输出一个numpy数组np.arange(a,b,c) #构建一个范围为[a,b),步长为c的数组np.arrange(1,5,2) #&gt;&gt;&gt;[1 3])np">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-03-22T04:01:34.633Z">
+<meta property="article:modified_time" content="2024-03-22T04:07:19.628Z">
+<meta property="article:author" content="StellarLane">
+<meta name="twitter:card" content="summary">
+
+
+<title >Data100 Note 1</title>
+
+<!-- Favicon -->
+
+    <link href='https://em-content.zobj.net/source/google/387/winking-face_1f609.png?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='https://em-content.zobj.net/source/google/387/winking-face_1f609.png?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='https://em-content.zobj.net/source/google/387/winking-face_1f609.png?v=2.1.10' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"stellarlane.github.io","author":"StellarLane","root":"/","typed_text":["Let it go as if you wander"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"https://em-content.zobj.net/source/skype/289/shooting-star_1f320.png","icon16":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","icon32":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","appleTouchIcon":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://em-content.zobj.net/source/google/387/pleading-face_1f97a.png","showText":"StellarLane's Blog","hideText":"喜欢您来，喜欢您再来>_<"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":""}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-22 12:07:19"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://em-content.zobj.net/source/skype/289/shooting-star_1f320.png">
+    
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友链
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://ooo.0x0.ooo/2024/02/26/OyAN0B.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Thanks for reading!
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            Data100 Note 1
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://ooo.0x0.ooo/2024/02/26/Oy7Zgg.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        StellarLane
+    </h5>
+    
+        <div class="trm-label">
+            
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/StellarLane" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+        <a href="https://steamcommunity.com/profiles/76561199518661334/" title="Steam" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-steam"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                City:
+            </div>
+            <div class="trm-label trm-label-light">
+                Shanghai
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                location:
+            </div>
+            <div class="trm-label trm-label-light">
+                SJTU, Minhang
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                Age:
+            </div>
+            <div class="trm-label trm-label-light">
+                18
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:stellarlane2@gmail.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/22
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            12:01
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            StellarLane
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="Data100-Note-1"><a href="#Data100-Note-1" class="headerlink" title="Data100 Note 1"></a>Data100 Note 1</h1><h2 id="Lab1"><a href="#Lab1" class="headerlink" title="Lab1"></a>Lab1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>numpy基础</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.array(<span class="built_in">list</span>) <span class="comment">#根据一个默认list输出一个numpy数组</span></span><br><span class="line">np.arange(a,b,c) <span class="comment">#构建一个范围为[a,b),步长为c的数组</span></span><br><span class="line">np.arrange(<span class="number">1</span>,<span class="number">5</span>,<span class="number">2</span>) <span class="comment">#&gt;&gt;&gt;[1 3])</span></span><br><span class="line">np.<span class="built_in">sum</span> <span class="comment">#将数组所有元素相加求和</span></span><br><span class="line">np.cumsum <span class="comment">#返回一个数组元素为原数组的累加和</span></span><br><span class="line">np.cumsum(np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])) <span class="comment">#&gt;&gt;&gt;[1 3 6 10 15]</span></span><br><span class="line">np.linspace(a,b,c) <span class="comment">#有点类似arrange，生成一个有c个平均分布的元素从a到b（两边都包括）的数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Boolean Indexing<br>可将一个对Numpy数组进行条件判断（即对每个元素依次进行条件判断）返回一个新Numpy数组，其中每个元素都是对应的布尔值可再将新Numpy数组传入一个Numpy的index里，返回布尔数组中对应元素为true的元素,如:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test_arr=np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">bool_arr=test_arr%<span class="number">2</span>==<span class="number">1</span></span><br><span class="line">fin_arr=test_arr[bool_arr]</span><br><span class="line"><span class="built_in">print</span>(bool_arr) <span class="comment">#&gt;&gt;&gt;[True False True False True]</span></span><br><span class="line"><span class="built_in">print</span>(fin_arr) <span class="comment">#&gt;&gt;&gt;[1, 3, 5]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mathplotlib.pyplot基础</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.figure() <span class="comment">#新建一个图表，第一个图可以不用，默认生成</span></span><br><span class="line">plt.grid(<span class="literal">True</span>) <span class="comment">#在图标背景生成方格</span></span><br><span class="line">plt.xlim(a,b) <span class="comment">#将x轴的显示范围调整为a到b</span></span><br><span class="line">plt.ylim(a,b) <span class="comment">#同上，不过是y轴</span></span><br><span class="line">plt.axhline(y=a) <span class="comment">#生成一个平行于a轴的直线</span></span><br><span class="line">plt.ayhline(x=a) <span class="comment">#同上，不过是y轴</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mathplotlib 和 numpy 综合生成3d图表</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> axes3d</span><br><span class="line">np.meshgrid <span class="comment"># （一般）传入两个一维数组，生成两个由两者分别二维化的数组</span></span><br><span class="line">x=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">y=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">X,Y=np.meshgrid(x,y)</span><br><span class="line"><span class="comment"># X=[[1,2,3]</span></span><br><span class="line"><span class="comment">#       [1,2,3]</span></span><br><span class="line"><span class="comment">#       [1,2,3]]</span></span><br><span class="line"><span class="comment"># Y=[[1,1,1]</span></span><br><span class="line"><span class="comment">#       [2,2,2]</span></span><br><span class="line"><span class="comment">#       [3,3,3]]</span></span><br><span class="line"><span class="comment"># 应用此函数，加上一个由x，y决定的z值，便可以实现三维空间中的点阵，</span></span><br><span class="line">arr=np.array()</span><br><span class="line">arr.reshape(x.shape)</span><br><span class="line"><span class="comment"># 此处reshape即是将arr改成一个与传入的array的形状相同的数组，若由一维数组改为二维数组 etc.</span></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line"><span class="comment"># 添加了一个新子图，其中“abc”表示了新子图的位置和基础性质，前两位表示其属于子图集共有a行b列，而本子图是对应行的第c个</span></span><br><span class="line">ax.plot_wireframe(x, y, z, rstride = <span class="number">5</span>, cstride = <span class="number">5</span>, lw = <span class="number">2</span>)</span><br><span class="line"><span class="comment"># 创建了一个3D线框图，其中在x和y轴线框步长均为5，线长为2</span></span><br><span class="line">ax.plot_surface(...)</span><br><span class="line"><span class="comment"># 即3D平面图</span></span><br><span class="line">ax.view_init(elev = a, azim = b)</span><br><span class="line"><span class="comment"># 设置观察角度，仰角为a，方向角为b</span></span><br><span class="line">plt.savefig(<span class="string">&quot;figure1.png&quot;</span>)</span><br><span class="line"><span class="comment"># 保存此图片</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="HW01"><a href="#HW01" class="headerlink" title="HW01"></a>HW01</h2><p>我只完成了这个HW的部分内容（以编程部分为主），记一下自己还记得到的东西</p>
+<ul>
+<li>Latex回顾  <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span> <span class="built_in">$</span> <span class="params">#</span>行内引用</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span> <span class="built_in">$</span><span class="built_in">$</span> <span class="params">#</span>单行引用</span><br><span class="line"><span class="keyword">\ </span><span class="params">#</span>转义字符</span><br><span class="line"><span class="keyword">\begin</span>&#123;align&#125;</span><br><span class="line">f(x) <span class="built_in">&amp;</span>= (x - 1)<span class="built_in">^</span>2 <span class="keyword">\\</span></span><br><span class="line">     <span class="built_in">&amp;</span>= x<span class="built_in">^</span>2 - 2x + 1 <span class="params">#</span>按照latex逻辑,<span class="keyword">\\</span>会提行,有<span class="built_in">&amp;</span>为前缀的不同行的=会对齐</span><br><span class="line"><span class="keyword">\end</span>&#123;align&#125;</span><br></pre></td></tr></table></figure></li>
+<li>简单画图  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplot.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<ul>
+<li>直方图  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.hist(data) <span class="comment">#data是一个array数组,程序会根据这个数组绘制直方图</span></span><br></pre></td></tr></table></figure>
+  更多可选参数:<br>  <code>bin</code> :区间数,可以传递一个数或者一个递增数组<br>  <code>ec</code> :直方图柱子的边缘颜色<br>  <code>density</code> :若设置为True则使所有直方图的面积固定为1</li>
+<li>曲线图  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(x,f_x) <span class="comment">#传入一组x和f(x)值,得到函数图</span></span><br></pre></td></tr></table></figure>
+  更多可选参数<br>  <code>color</code> : 线条颜色。<br>  <code>linestyle</code> : 线条样式，如实线（’-‘）、虚线（’–’）、点线（’:’）等。<br>  <code>linewidth</code> : 线条宽度。<br>  <code>marker</code> : 数据点的标记样式，如圆圈（’o’）、星号（’*’）、方形（’s’）等。<br>  <code>markersize</code> : 标记的大小。<br>  <code>alpha</code> : 线条和标记的透明度，范围从0（完全透明）到1（完全不透明）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Lab2"><a href="#Lab2" class="headerlink" title="Lab2"></a>Lab2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Pandas 基础<ul>
+<li>构建<br>  DataFrame 是数据分析中常用到的一种类，其实例与一个表格相似，pandas提供了多种方法来构建和修改一个DataFrame实例。  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#按列构建</span></span><br><span class="line">test=pd.DataFrame(</span><br><span class="line">    data=&#123;<span class="string">&#x27;column0&#x27;</span>:[<span class="string">&#x27;00&#x27;</span>,<span class="string">&#x27;01&#x27;</span>,<span class="string">&#x27;02&#x27;</span>],<span class="string">&#x27;column1&#x27;</span>:[<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;11&#x27;</span>,<span class="string">&#x27;12&#x27;</span>],<span class="string">&#x27;column2&#x27;</span>:[<span class="string">&#x27;20&#x27;</span>,<span class="string">&#x27;21&#x27;</span>,<span class="string">&#x27;22&#x27;</span>]&#125;</span><br><span class="line">)</span><br><span class="line"><span class="comment">#按行构建</span></span><br><span class="line">test=pd.DataFrame(</span><br><span class="line">    [(<span class="string">&#x27;00&#x27;</span>,<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;20&#x27;</span>),(<span class="string">&#x27;01&#x27;</span>,<span class="string">&#x27;11&#x27;</span>,<span class="string">&#x27;21&#x27;</span>),(<span class="string">&#x27;02&#x27;</span>,<span class="string">&#x27;12&#x27;</span>,<span class="string">&#x27;22&#x27;</span>)],</span><br><span class="line">    columns=[<span class="string">&#x27;column0&#x27;</span>,<span class="string">&#x27;column1&#x27;</span>,<span class="string">&#x27;column2&#x27;</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+  这两个都会构建一个类似3*3的表格<table>
+<thead>
+<tr>
+<th></th>
+<th>column0</th>
+<th>column1</th>
+<th>column2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>00</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr>
+<td>1</td>
+<td>01</td>
+<td>11</td>
+<td>21</td>
+</tr>
+<tr>
+<td>2</td>
+<td>02</td>
+<td>12</td>
+<td>22</td>
+</tr>
+</tbody></table>
+</li>
+<li>读取<br>  注意如 <code>loc</code> <code>iloc</code> 等不是函数,其也没有通过 () 传递的参数<br>  一个DataFrame实例存在诸多性质,常见的即为读取其中的部分元素或者整体形状,可使用 <code>loc</code> <code>iloc</code> 和 <code>[]</code> 来获取某个行的值  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test.loc[<span class="number">1</span>,<span class="string">&#x27;columns1&#x27;</span>]</span><br><span class="line">test.iloc[<span class="number">1</span>,<span class="number">1</span>] <span class="comment"># iloc与loc相似,差别仅是列使用原始索引值还是对应的数字索引</span></span><br><span class="line">test[<span class="number">0</span>:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+  除此之外还可以使用 <code>values</code> 方法得到一个由dataframe转化的numpy(二维)数组, 也可以通过 <code>shape</code> 方法获得dataframe的规模  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test.values</span><br><span class="line"><span class="comment"># [[10 20 30]</span></span><br><span class="line"><span class="comment">#  [11 21 31]</span></span><br><span class="line"><span class="comment">#  [12 22 32]]</span></span><br><span class="line">test.shape</span><br><span class="line"><span class="comment"># (3, 3)</span></span><br></pre></td></tr></table></figure></li>
+<li>修改<br>  对整行整列可以使用 <code>drop</code> 方法  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.drop(labels=<span class="literal">None</span>, axis=<span class="number">0</span>, index=<span class="literal">None</span>, columns=<span class="literal">None</span>, inplace=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># drop既可以删除行也可以删除列,有两种方法</span></span><br><span class="line">test.drop(labels=<span class="string">&#x27;column1&#x27;</span>,axis=<span class="number">1</span>) <span class="comment">#这种方法由axis规定了其drop的为列(axis=0为行)</span></span><br><span class="line">test.drop(columns=<span class="string">&#x27;column&#x27;</span>) <span class="comment">#此处columns确定了为行,若使用列则参数为&quot;index=&quot;</span></span><br></pre></td></tr></table></figure>
+  除此之外,还有一个 <code>inplace</code> 参数, 若inplace为true则说明其是直接在原表格上生成一个新表(默认为false),否则生成一个新表不对旧表修改<br>  同样可以用rename来重命名列名  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.rename(columns=&#123;<span class="string">&#x27;column1:COLUMN1&#x27;</span>&#125;)</span><br></pre></td></tr></table></figure>
+  若需修改单个元素,则需用 <code>loc</code> 或其他定位方式定位到对应坐标并重新赋值</li>
+<li>排序<br>  可以通过 <code>sort</code> 方法对DataFrame的行进行重排序  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test.sort_values(by=<span class="string">&#x27;column1&#x27;</span>,ascending=<span class="literal">False</span>) <span class="comment">#此处第一个参数即为你排序的参考依据, 参数ascending即为选择是递增还是递减排序</span></span><br><span class="line"><span class="comment">#一般来说sort_values默认是按大小排的,但也可以引入新的参数key来自定义排序标准</span></span><br><span class="line">test.sort_values(by=<span class="string">&#x27;column1&#x27;</span>,key=<span class="keyword">lambda</span> x:x.<span class="built_in">str</span>.<span class="built_in">len</span>(),ascending=<span class="literal">False</span>) <span class="comment">#这样可以按字符串长短排序</span></span><br></pre></td></tr></table></figure></li>
+<li>判断<br>  类似numpy数组中将布尔值作为索引的逻辑, pandas的DataFrame同样可以实现类似操作  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test2=test[test[<span class="string">&#x27;column0&#x27;</span>==<span class="string">&#x27;01&#x27;</span>]]</span><br><span class="line"><span class="comment">#将会检查每一行的column0的直到满足条件的值,并返回所有满足条件的行组成的新dataframe</span></span><br></pre></td></tr></table></figure>
+  或者也可以通过一个 <code>query</code> 函数达到类似的效果  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test2=test.query(<span class="string">&quot;&#x27;column1&#x27;==&#x27;01&#x27;&quot;</span>)</span><br><span class="line"><span class="comment">#作用与上一个几乎一样,注意传入query的一定是一个字符串,若所使用的列名为特殊字符,需要用反引号``而非\进行转义</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="HW02"><a href="#HW02" class="headerlink" title="HW02"></a>HW02</h2><p>这个HW借助一个食品安全数据分析的案例带领我体验了数据处理的全生命周期，是一次酣畅淋漓的赤石体验😆不过确实学到和应用了很多东西🥹</p>
+<ul>
+<li>Q1<br>  这部分使用了选择列的函数 <code>.loc[:,&#39;column&#39;]</code> , 用于去除重复值的 <code>unique()</code> , 随后本体要求对其中某几列进行排序找到频率最高的一项, 这里使用在得到对应列之后可以使用 <code>values_count()</code> 其可以统计当前行的频数, 默认进行了排序后输出, 但这样得到的并非前五的名字, 仍然是一个series, 此处的名字就是列表的索引值, 因此我们可以用 <code>.index</code> 来得到索引值, 生成所需的列表</li>
+<li>Q2<ul>
+<li>q2a我们需要将原数据按邮编重新排序并统计每个邮编的出现次数, 显然这里用 <code>groupby().size()</code> 即可</li>
+<li>q2c我们需要去除那些邮编不正确的样本, 那需要先得到一组正确的邮编, 此处HW大概手把手教了如何从一个 .json 文件中导入相关数据, 其使用 <code>pd.read_json(&#39;file&#39;)</code> 从文件中导出了一个包含所有正确邮编的dataframe, 但dataframe有点不利于后续的处理, 所以这里后来通过单独取列将格式改为了series, 随后将每个邮编的格式通过 <code>astype(&#39;string&#39;)</code> 由int改为了string; 在得到正确样本之后, 就可以通过 <code>(被检查组).isin(目标组)</code> , 再将其作为逻辑下标传入原bus中, 即可以得到有正确邮编的dataframe</li>
+<li>q2d时问题提出了很多不正确的邮编实际采用的是 -9999 本来是作为缺失邮编的记号的, 要求将这些数据再按地址合并, 再统计每个地址不正确的邮编数, 按每个地址的不正确邮编数倒序输出; 这个题目本身是不难的, 先用逻辑下表筛选邮编号, 然后使用 <code>groupby()</code> 将同一地址的合并, 再使用 <code>size()</code> 来统计每个地址的元素个数, 最后用<code>sort_values(ascending=False)</code> 来切换成降序输出, 但是我英语太差了, 读了很久才知道题意🤡🤡</li>
+<li>q2f倒是还比较简单, 需要自己实现的部分就是把每行的 postal_code 取前五位放到一个新列 postal5 即可, 注意是不能直接对postal_code的元素来 <code>[:5]</code> 取前五位的, 这样达不到效果, 使用的函数时 <code>str.[:5]</code> 即先通过str确保访问的是其所存放的字符串</li>
+</ul>
+</li>
+<li>Q3<ul>
+<li>q3a检查一列数据是否有重复值, 和Q1的一问很相似</li>
+<li>q3b要求将其中一列的一部分提取出来构造一个新列, 这里和Q2最后一步的不同是这个不知道到底是要提取数据的前几位, 只知道要提取分隔符 ‘_’ 之前的部分, 因此这里不能用简单的切片而是处理字符串的函数 <code>split()</code> 且此处我为了更方便提取每一个分割的第一项, 选择了额外参数 <code>expand=True</code> 这样使最后的结果为一个dataframe, 我可以直接提取第一列, 最后还使用了 <code>astype(int)</code> 将得到的值转化为了 int型</li>
+<li>q3b倒是比较简单, 主要介绍了TimeStamp这类数据类型, 这类数据类型通常用于记录时间, 其可以由特定格式的字符串或者其他数据转化得来, 其支持很多从简单的获取年份日期到夏令时调整, 此处使用的最基础的用 <code>.dt.xxx</code> 来获取一个TimeStamp中的年份,月份等; 还使用了 <code>max()</code> 和 <code>min()</code> 函数选极值</li>
+<li><del>q3d还没想出来怎么做, 真的是飞舞啊😭😭😭</del> , 最后还是没有和题目要求完全相似，但大体是类似的， 本题主要练习的是 <code>pivot_table()</code> 的用法, 此函数的大体结构为 <code>pivot_table(df,values=,index=,columns=,aggfunc=,fill_value=)</code><br>  就以这道题为例, 这道题的要求是给一个表格, 记录了多次对餐饮店考查的考察类型, 得分(其中有效得分&gt;0, 有部分无效得分记为-1), 要求每行为一种考察类型, 数据包含该类型的考察次数, 其中有有效得分的次数, 没有有效得分的次数和总次数,最终得到的代码为:  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ins_c=ins.copy()</span><br><span class="line">ins_c[<span class="string">&#x27;Missing Score&#x27;</span>] = (ins_c[<span class="string">&#x27;score&#x27;</span>] == -<span class="number">1</span>).astype(<span class="built_in">str</span>)</span><br><span class="line">ins_missing_score_pivot=pd.pivot_table(ins_c,values=<span class="string">&quot;score&quot;</span>,index=<span class="string">&#x27;type&#x27;</span>,columns=<span class="string">&#x27;Missing Score&#x27;</span>, aggfunc=<span class="string">&#x27;count&#x27;</span>,fill_value=<span class="number">0</span>)</span><br><span class="line">ins_missing_score_pivot[<span class="string">&#x27;total&#x27;</span>]=ins_missing_score_pivot[<span class="string">&#x27;False&#x27;</span>]+ins_missing_score_pivot[<span class="string">&#x27;True&#x27;</span>]</span><br><span class="line">ins_missing_score_pivot.sort_values(by=<span class="string">&#x27;total&#x27;</span>,ascending=<span class="literal">False</span>,inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+  其中,第二行添加了一列, 将所有得分分为了有效得分和无效得分, 便于之后的计算(注意这里的’True’和’False’是字符串而非布尔值); 第三行则是主要的 <code>pivot_table</code> 函数, 第一个参数 <code>ins_c</code> 指使用的是ins_c中的数据, index&#x3D;’type’ 表明新表的每一行是原表中’type’列的值, columns&#x3D;’Missing Score’即代表新表的列为原表中’Missing Score’的值, values&#x3D;”score”和aggfunc&#x3D;’count’ 表示表格中的元素是取自原表中的score列, 且处理方式为统计满足当前格子要求的元素量; 最后fill_value&#x3D;0即表示所有缺失值用0来填充; 第三行即将得到的新表按’total’列的值降序排序<blockquote>
+<p>现在回过头看感觉这个题也不难, 就是一个pivot_table()的最简单的应用, 这是什么, 又菜又不耐心🥲</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>Q4<ul>
+<li>q4a相对而言比较基础的 <code>merge()</code> 函数练习, 从最简单的角度来说, merge()主要则是考虑合并的逻辑(参数 <code>how</code> ), 常用的为left(按传入的第一个为主,确保第一个表所有数据都留下), right, inner(取二者交集, 换言之新表中没有NaN值), 和outer(所有数据都被保留, 但表格中会有NaN)</li>
+<li>q4b要求找到中位数最低的前20个商家, 这个倒是比较简单的groupby()应用, aggfuc选用已有的 <code>medium()</code></li>
+<li>q4c是找到最低分最低的, 不多赘述了</li>
+</ul>
+</li>
+<li>Q5 &amp; Q6<br>  这部分则是简单的分析与可视化<ul>
+<li>Q5主要绘制了一个频率直方图, 使用了 <code>plt.plot()</code> 函数进行绘制和 <code>plt.xlabel</code>, <code>plt.ylabel</code>, <code>plt.title</code> 进行标注</li>
+<li>Q6先统计了部分有多个评分商家的高低分差, 仍然是对之前已经用过的函数的排列组合, 之前经常出现想要提取的行是索引行, 当然可以用.index来访问, 不过也可以修改表格结构, 可以 <code>reset_index()</code> 将原index变为一个普通列后生成一个默认的数字索引列, 除此之外还可用<code>set_index()</code> 将某一行设定为索引值</li>
+<li>Q6还绘制了一个散点图, 使用 <code>plt.scatter()</code> 即可绘制散点图</li>
+</ul>
+</li>
+</ul>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/03/22/Data100N0/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/Data100/">
+                    Data100
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/03/22/Data100N0/" class="trm-anima-link">
+                    Data100 Note 0： 开荒
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/03/22</li>
+                <li>12:01</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.1.1
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.1.10
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Data100 Note 1"><a rel="nofollow" class="trm-toc-link" href="#Data100-Note-1"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Data100 Note 1</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="Lab1"><a rel="nofollow" class="trm-toc-link" href="#Lab1"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">Lab1</span></a></li><li class="trm-toc-item trm-toc-level-2" title="HW01"><a rel="nofollow" class="trm-toc-link" href="#HW01"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">HW01</span></a></li><li class="trm-toc-item trm-toc-level-2" title="Lab2"><a rel="nofollow" class="trm-toc-link" href="#Lab2"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">Lab2</span></a></li><li class="trm-toc-item trm-toc-level-2" title="HW02"><a rel="nofollow" class="trm-toc-link" href="#HW02"><span class="trm-toc-number">1.4.</span> <span class="trm-toc-text">HW02</span></a></li></ol></li></ol>
+      </div>
+    </div>
+
+            
+<div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.1.10"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.1.10"></script>
+
+</body>
+
+</html>
