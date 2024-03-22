@@ -7,20 +7,20 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="Bandit Level 0~15Sysadmin Decal是一门很棒的课程，但部分作业需要远程服务器，不对外开放。我参考csdiy的建议，完成了bandit前15个level，作为熟练相关指令的补充练习  level 0很简单，但我一直没打明白，不是端口号打成2200就是用户名漏打了个0就是地址labs打成了lab了，有点消愁了 1ssh -p 2220 bandit0@bandit.labs">
+<meta name="description" content="‘R’unthrough N1因为是速通，所以会写得比较简短和跳跃速通参考书为PKU李东风教授《R语言教程》, 非常感谢李东风教授的整理 使用R语言进行编程首先是要在电脑上下载R语言， 建议下载后添加到环境变量里R语言自带有IDE， 但Rstudio（或者vsc）是更好的替代品以Rstudio为例， 其界面分为4个部分， （默认情况下）左上为主要的代码编写部分， 这部分代码会被储存在一个 .R 文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bandit Level 0~15">
-<meta property="og:url" content="https://stellarlane.github.io/2024/03/08/Bandit/index.html">
+<meta property="og:title" content="\&#39;R\&#39;unthrough Note 1">
+<meta property="og:url" content="https://stellarlane.github.io/2024/03/22/'R'unthrough%20N1/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Bandit Level 0~15Sysadmin Decal是一门很棒的课程，但部分作业需要远程服务器，不对外开放。我参考csdiy的建议，完成了bandit前15个level，作为熟练相关指令的补充练习  level 0很简单，但我一直没打明白，不是端口号打成2200就是用户名漏打了个0就是地址labs打成了lab了，有点消愁了 1ssh -p 2220 bandit0@bandit.labs">
+<meta property="og:description" content="‘R’unthrough N1因为是速通，所以会写得比较简短和跳跃速通参考书为PKU李东风教授《R语言教程》, 非常感谢李东风教授的整理 使用R语言进行编程首先是要在电脑上下载R语言， 建议下载后添加到环境变量里R语言自带有IDE， 但Rstudio（或者vsc）是更好的替代品以Rstudio为例， 其界面分为4个部分， （默认情况下）左上为主要的代码编写部分， 这部分代码会被储存在一个 .R 文">
 <meta property="og:locale">
-<meta property="article:published_time" content="2024-03-08T14:32:44.202Z">
-<meta property="article:modified_time" content="2024-03-08T14:34:20.242Z">
+<meta property="article:published_time" content="2024-03-22T04:01:21.600Z">
+<meta property="article:modified_time" content="2024-03-22T04:17:02.288Z">
 <meta property="article:author" content="StellarLane">
 <meta name="twitter:card" content="summary">
 
 
-<title >Bandit Level 0~15</title>
+<title >\'R\'unthrough Note 1</title>
 
 <!-- Favicon -->
 
@@ -63,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"stellarlane.github.io","author":"StellarLane","root":"/","typed_text":["Let it go as if you wander"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"https://em-content.zobj.net/source/skype/289/shooting-star_1f320.png","icon16":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","icon32":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","appleTouchIcon":"https://em-content.zobj.net/source/google/387/winking-face_1f609.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://em-content.zobj.net/source/google/387/pleading-face_1f97a.png","showText":"StellarLane's Blog","hideText":"喜欢您来，喜欢您再来>_<"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":""}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-08 22:34:20"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-22 12:17:02"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -221,7 +221,7 @@
                             Thanks for reading!
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Bandit Level 0~15
+                            \'R\'unthrough Note 1
                         </h1>
 
                         
@@ -350,13 +350,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            03/08
+            03/22
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            22:32
+            12:01
         </div>
     </div>
     <div class="col-sm-4">
@@ -368,61 +368,35 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="Bandit-Level-0-15"><a href="#Bandit-Level-0-15" class="headerlink" title="Bandit Level 0~15"></a>Bandit Level 0~15</h1><p>Sysadmin Decal是一门很棒的课程，但部分作业需要远程服务器，不对外开放。我参考csdiy的建议，完成了bandit前15个level，作为熟练相关指令的补充练习</p>
-<ul>
-<li><p>level 0<br>很简单，但我一直没打明白，不是端口号打成2200就是用户名漏打了个0就是地址labs打成了lab了，有点消愁了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 2220 bandit0@bandit.labs.overthewire.org</span><br></pre></td></tr></table></figure>
+    <h1 id="‘R’unthrough-N1"><a href="#‘R’unthrough-N1" class="headerlink" title="‘R’unthrough N1"></a>‘R’unthrough N1</h1><p>因为是速通，所以会写得比较简短和跳跃<br>速通参考书为PKU李东风教授《R语言教程》, 非常感谢李东风教授的整理</p>
+<h2 id="使用R语言进行编程"><a href="#使用R语言进行编程" class="headerlink" title="使用R语言进行编程"></a>使用R语言进行编程</h2><p>首先是要在电脑上下载R语言， 建议下载后添加到环境变量里<br>R语言自带有IDE， 但Rstudio（或者vsc）是更好的替代品<br>以Rstudio为例， 其界面分为4个部分， （默认情况下）左上为主要的代码编写部分， 这部分代码会被储存在一个 .R 文件中, 左下为命令行, 和py和bash类似, 命令行也可用写部分代码或者命令, 但由于其不会被保存, 所以一般还是建议写在 .R 文件里, 对于 .R 文件中的代码, 通常是逐行运行, 按crtl+enter即可运行当前行的代码, 当前行代码的效果, 如生成的变量等, 会被记录在环境中, 可在右上角的环境窗口来监视环境中所有的变量, 可以手动清除当前环境中存在的所有变量, 右下角区域则为文件导航<br>R语言有丰富的拓展包, 下载这些拓展包最常用的方式则是 <code>install.packages(&quot;你想要下载的包&quot;)</code> , 随后需要再次使用 <code>library(你要启用的包)</code> 来启用, 注意library这里不用引号</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>R语言的基础变量包括数值, 字符串（没有单个字符）, 布尔值, 缺失值<br>数值的类型一般会自动决定, 不用显式说明, 且支持用科学计数法表示和表示虚数;<br>R中没有字符一说, 都是字符串, 可用””也可用’’, 支持中文, 但注意编码<br>R中还有缺失值一说, 一般记为NA, 数值型, 字符型, 布尔型都可以有缺失值, 不过字符型的缺失值需要手动规定</p>
+<p>以上述这些基础变量作为向量的元素, R语言的数据可以以向量,矩阵等形式存储, 单个数值也可以理解为标量; R语言是动态类型的 变量类型不需要事先声明, 在R语言中通过 <code>&lt;-</code> 进行赋值操作, 可用 <code>c()</code> 创建新向量,如:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">a</span><br><span class="line"><span class="comment"># [1] 1 2</span></span><br></pre></td></tr></table></figure>
+<p>除此之外R也支持对象</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数同样的常规调用方法与其他语言大同小异, 除此之外也可以使用”pipe” <code>|&gt;</code> 调用, 除了多了个&gt;以外和bash中的pipe运算符差不多;</p>
+<p>R自带了大量的内置函数:<br><code>%/%</code> 表示整除, <code>%%</code> 表示取余;<br><code>^</code> 表示乘方运算;<br><code>round(a,b)</code> 对a向下取整至小数点后b位, (b可不写默认为0), <code>round(a,b)</code> <code>ceiling(a,b)</code> 分别为四舍五入,向上取整;<br>内置 <code>sin(x)</code> <code>cos(x)</code> <code>tan(x)</code> , 单位为弧度制, 也可使用反三角函数,加a即可, 如 <code>asin(x)</code> 即表示反正弦,;<br>除此之外还包括大量分布函数, 如 <code>dnorm(x)</code> 表示标准正态分布密度 $ \phi(x)&#x3D;\frac{1}{\sqrt(2\pi)}e^{-\frac{1}{2}x^2} $ , <code>pnorm(x)</code> 表示标准正态分布函数 $ \Phi&#x3D;\int_{-\infin}^{x} \phi(x)dt $ <code>qnorm(y)</code> 表示标准正态分布位函数, 即 $ \Phi^{-1}(x) $ 等;</p>
+<p>除此之外R也支持函数自定义, 格式如下:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">functionname <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x1<span class="punctuation">,</span> x2<span class="punctuation">,</span> y1<span class="punctuation">,</span> y2<span class="punctuation">)</span><span class="punctuation">&#123;</span> <span class="comment">#用=替代&lt;-其实也可以</span></span><br><span class="line">    <span class="built_in">sqrt</span><span class="punctuation">(</span><span class="punctuation">(</span>x1<span class="operator">-</span>x2<span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="punctuation">(</span>y1<span class="operator">-</span>y2<span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>在R中函数有返回值, 当没有明确指出时默认将最后一个语句的结果返回, 或者直接使用return来返回需要的值</p>
+<p>输出可使用print或者cat(), cat()可用于多项内容和文本, 且可以使用”\n”进行换行操作, 在这两种常规的输出之外, 还有一种 <code>sink()</code> 常用于调试阶段, 其可以在程序执行时将数据写入到文档或其他媒介中, 也可以在程序结束后用 <code>sink()</code> 清空</p>
+<h3 id="画图初步"><a href="#画图初步" class="headerlink" title="画图初步"></a>画图初步</h3><ul>
+<li><p>curve<br>  curve(f,a,b) 可用于绘制[a,b]区间上的f(x)函数图像,如</p>
+  <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curve<span class="punctuation">(</span><span class="built_in">sin</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">,</span><span class="number">2</span><span class="operator">*</span><span class="built_in">pi</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>  即绘制了[0,2$\pi$]段的$f(x)&#x3D;sinx$的图像<br>  更多可选参数<br>  <code>n</code> : 可选参数，指定在给定范围取的点数，默认为100。<br>  <code>type</code> : 可选参数，指定曲线的类型，可以是 “l”（线段），”s”（阶梯），”b”（点线），或者 “c”（平滑曲线）。<br>  <code>col</code> : 可选参数，指定曲线的颜色。<br>  <code>lwd</code> : 可选参数，指定曲线线的宽度。</p>
 </li>
-<li><p>level 1<br>  使用 <code>ls</code> 即可发现一个readme文档，使用 <code>cat</code> 打开即可得到密码</p>
+<li><p>barplot<br>  barplot可用于绘制直方图, 其主要参数为一个向量, 反映每个条形的高度, 这个向量可以是一个纯数向量, 其元素也可以是 “组名”&#x3D;数值 的形式, 如:</p>
+  <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">barplot<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;睡眠充足&quot;</span><span class="operator">=</span><span class="number">20</span><span class="punctuation">,</span><span class="string">&quot;睡眠不足&quot;</span><span class="operator">=</span><span class="number">70</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>  更多可选参数<br>  <code>height</code> : 一个数值向量，表示条形的高度。通常，这是你想要在条形图中展示的数据。<br>  <code>width</code> : 一个数值向量，表示条形的宽度。如果只有一个数值，所有的条形将使用相同的宽度。<br>  <code>space</code> : 一个数值，表示条形之间的间隔大小。<br>  <code>col</code> : 一个颜色向量，用于指定每个条形的颜色。如果没有提供，条形将使用默认的颜色。<br>  <code>horiz</code> : 一个逻辑值，如果设置为 TRUE，将创建水平条形图；如果为 FALSE（默认值），则创建垂直条形图。<br>  <code>main</code> : 将创建表格标题</p>
 </li>
-<li><p>level 2<br>  本关即是让你打开一个文件名为“-”的文档，直接输入会被当做参数标志，可以使用相对路径打开</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ./- <span class="comment">#此处.即为当前directory</span></span><br></pre></td></tr></table></figure></li>
-<li><p>level 3<br>  本关让你打开一个文档名中有空格的文档，直接输入可能只会读入文档的第一个单词，需要使用引号把整个文档名括在一起</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> <span class="string">&quot;spaces in this filename&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>level 4<br>  本关需要打开一个不能被ls找出的文件（实现方式是将文件名用.开头即可），我是用的find找到了隐藏的文件</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find -<span class="built_in">type</span> f</span><br><span class="line"><span class="comment"># ./.hidden</span></span><br><span class="line"><span class="built_in">cat</span> .hidden</span><br></pre></td></tr></table></figure>
-<p>  当然用<code>ls -a</code>也可以找到对应的文件</p>
+<li><p>plot<br>  plot可用来绘制一般散点图, 最简单的散点图需要两个向量作为参数, 一个是横坐标值, 另一个是纵坐标值</p>
+  <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot<span class="punctuation">(</span><span class="number">1</span><span class="operator">:</span><span class="number">10</span><span class="punctuation">,</span><span class="built_in">sqrt</span><span class="punctuation">(</span><span class="number">1</span><span class="operator">:</span><span class="number">10</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>  事实上plot能画大部分图像包括curve和plot所画的, 可通过参数 <code>type</code> 自行选择</p>
 </li>
-<li><p>level 5<br>  inhere中有多个文件，需要找到由ASCII编码的那个，可以使用file做到</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file ./-file00 <span class="comment">#知识点复习，用相对路径找带-的文件</span></span><br><span class="line"><span class="comment">#data</span></span><br><span class="line">...</span><br><span class="line">file ./-file07</span><br><span class="line"><span class="comment">#ASCII, that&#x27;s it!</span></span><br></pre></td></tr></table></figure>
-<p>  也可以使用 <code>file ./*</code> 一次性看完</p>
+<li><p>abline<br>  除了自身生成的图像外, 可使用abline手动添加点和直线等, 最简单的例如</p>
+  <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abline<span class="punctuation">(</span>h<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span></span><br><span class="line">abline<span class="punctuation">(</span>v<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<p>  第一行添加了位于y&#x3D;2的一条水平线, 第二行添加了一条位于x&#x3D;2的竖直线</p>
 </li>
-<li><p>level 6<br>只需要第二个条件就可以找到唯一满足的文件了</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -size 1033c</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>level 7<br>find 同样支持按user和group查找</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -user bandit6 -group bandit7 -size 33c</span><br></pre></td></tr></table></figure>
-<p>  他会有一大长串搜索结果，要肉眼遍历找到其中一个叫“password”的文件</p>
-</li>
-<li><p>level 8<br>  简单的grep函数应用</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&quot;millionth&quot;</span> data.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>level 9<br>  sort可以按一定顺序排序（一般默认就可以），uniq可以检查某行和它上下相邻的行是否相同，若相同则删除重复行，此处可以加入额外参数 -u，使只输出在初始时便只有一行的数据。</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span> data.txt | <span class="built_in">uniq</span> -u</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>level 10<br>  strings可以从二进制文件中提取可打印的字符，然后用grep”&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;”来筛选出密码（但我看这文件也不长，人工识别找密码也不是不行×）</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings data.txt | grep <span class="string">&quot;=====&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>level 11<br>  知道base64基本解码指令即可</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">base64</span> -d data.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>level 12<br>  此处需要介绍tr， tr可以接收两个字母表，将识别输入中每个字母在第一个字母表中的位置，并转化为第二个字母表中对应位置的字母</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> data.txt | <span class="built_in">tr</span> <span class="string">&#x27;a-zA-Z&#x27;</span> <span class="string">&#x27;n-za-mN-ZA-M&#x27;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>level 13<br>  真是一场酣畅淋漓的赤石啊，你们有这样的压缩吗，真是压压又缩缩啊<br>  本题先有一个16进制文件，用xxd解析之后就开始用bzip，gzip，tar反复解压</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 只列出部分所需代码</span></span><br><span class="line">xxd -r data data.output <span class="comment">#将原16进制解析成新的data.out文档</span></span><br><span class="line">file data <span class="comment">#确定当前格式，决定下次解压所需指令</span></span><br><span class="line"><span class="built_in">mv</span> data data.gz</span><br><span class="line">gzip -d data.gz <span class="comment">#gzip解压，之后再用list可看见新的文档data将data.gz替代，然后重复解压步骤</span></span><br><span class="line"><span class="built_in">mv</span> data data.bz2</span><br><span class="line">bunzip2 -d data.bz2 <span class="comment">#bunzip2解压</span></span><br><span class="line"><span class="built_in">mv</span> data data.tar</span><br><span class="line">tar -xdv data.tar <span class="comment">#tar解压</span></span><br></pre></td></tr></table></figure>
-<p>  反复解压多次偶得到一ASCII文件，即可得到密码</p>
-<blockquote>
-<p>wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw</p>
-</blockquote>
-</li>
-<li><p>level 14<br>  本题介绍了使用私钥文件而非密码进行连接的方法</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -i ./sshkey.private bandit14@localhost -p2220</span><br><span class="line"><span class="comment">#此处“-i ./sshkey.private”即代表通过私钥的方式登入位于localhost的2220端口处的bandit14用户</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq</p>
-</blockquote>
-</li>
-<li><p>level 15<br>  本题需要将密码发送至30000端口，比较简单的方法是使用nc</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc localhost 30000</span><br></pre></td></tr></table></figure></li>
 </ul>
 
 </article>
@@ -441,7 +415,7 @@
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2024/03/22/'R'unthrough%20N1/" class="trm-cover-frame trm-anima-link">
+        <a href="/2024/03/22/'R'unthrough%20N2/" class="trm-cover-frame trm-anima-link">
             
             
                 <img alt="cover" class="no-fancybox" src="/img/block.jpg">
@@ -455,8 +429,8 @@
                 </a>
             </div>
             <h5>
-                <a href="/2024/03/22/'R'unthrough%20N1/" class="trm-anima-link">
-                    \&#39;R\&#39;unthrough Note 1
+                <a href="/2024/03/22/'R'unthrough%20N2/" class="trm-anima-link">
+                    Runthrough Note s2
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
@@ -473,7 +447,7 @@
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2024/03/07/System%20Decal/" class="trm-cover-frame trm-anima-link">
+        <a href="/2024/03/08/Bandit/" class="trm-cover-frame trm-anima-link">
             
             
                 <img alt="cover" class="no-fancybox" src="/img/block.jpg">
@@ -487,14 +461,14 @@
                 </a>
             </div>
             <h5>
-                <a href="/2024/03/07/System%20Decal/" class="trm-anima-link">
-                    Sysadmin Decal Note 1
+                <a href="/2024/03/08/Bandit/" class="trm-anima-link">
+                    Bandit Level 0~15
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>24/03/07</li>
-                <li>22:40</li>
+                <li>24/03/08</li>
+                <li>22:32</li>
                 
                 
             </ul>
@@ -554,7 +528,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Bandit Level 0~15"><a rel="nofollow" class="trm-toc-link" href="#Bandit-Level-0-15"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Bandit Level 0~15</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="‘R’unthrough N1"><a rel="nofollow" class="trm-toc-link" href="#‘R’unthrough-N1"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">‘R’unthrough N1</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="使用R语言进行编程"><a rel="nofollow" class="trm-toc-link" href="#使用R语言进行编程"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">使用R语言进行编程</span></a></li><li class="trm-toc-item trm-toc-level-2" title="基础"><a rel="nofollow" class="trm-toc-link" href="#基础"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">基础</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="变量"><a rel="nofollow" class="trm-toc-link" href="#变量"><span class="trm-toc-number">1.2.1.</span> <span class="trm-toc-text">变量</span></a></li><li class="trm-toc-item trm-toc-level-3" title="函数"><a rel="nofollow" class="trm-toc-link" href="#函数"><span class="trm-toc-number">1.2.2.</span> <span class="trm-toc-text">函数</span></a></li><li class="trm-toc-item trm-toc-level-3" title="画图初步"><a rel="nofollow" class="trm-toc-link" href="#画图初步"><span class="trm-toc-number">1.2.3.</span> <span class="trm-toc-text">画图初步</span></a></li></ol></li></ol></li></ol>
       </div>
     </div>
 
