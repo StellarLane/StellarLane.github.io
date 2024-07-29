@@ -1,18 +1,19 @@
 ---
 title: 朋友们
-description: 我的小伙伴们和一些有趣的站点。
-comments: true
+description: 人声潮涌，远处亮起的灯火恍如某种预兆。
+comments: false
 ---
 
 ## 怎么申请友链？
 
-想要交换友链的小伙伴们，欢迎去本站的 [Github 仓库](https://github.com/lxchapu/astro-gyoza/tree/main/src/content/friends)提交一个 PR。审核通过后，就可以在这里展示啦。
+欢迎新朋友😍😍😍，如果您想与我交换友链，请通过[邮件](mailto:stellarlane2@gmail.com)或其他方式联系我哦🥰🥰🥰
 
-请在`/src/content/friends/`目录下添加一个`<short-name>.yaml`文件，参考格式：
+## 本站信息
 
-```yml
-title: 网站名称
-description: 一句话介绍下你的网站或者你自己
-link: 网站地址
-avatar: 头像地址
-```
+网站名称：StellarLane's Blog
+
+网站链接：https://stellarlane.github.io/
+
+网站头像：https://ooo.0x0.ooo/2024/07/29/ORlrtq.png
+
+网站简介：Life's short, why does it take so long?

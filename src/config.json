@@ -1,56 +1,60 @@
 {
   "site": {
-    "url": "https://gyoza.lxchapu.com",
-    "title": "Gyoza",
-    "description": "这是一个使用 Astro 和 React 开发的博客主题。",
-    "keywords": "Gyoza,blog,Astro,theme,lxchapu,博客主题",
+    "url": "https://stellarlane.github.io/",
+    "title": "Stellarlane's Blog",
+    "description": "这是一个分享生物医学工程本科生生活与学习和自学计算机相关课程的博客",
+    "keywords": "计算机科学,CS,DIY,生物医学工程,BME,自学",
     "lang": "zh-CN",
-    "favicon": "/favicon.ico",
-    "appleTouchIcon": "/apple-touch-icon.png"
+    "favicon": "/webicon.png",
+    "appleTouchIcon": "/webicon.png"
   },
   "author": {
-    "name": "lxchapu",
-    "twitterId": "@lxchapu",
-    "avatar": "https://s2.loli.net/2024/04/30/ozsnuS5Ihf3xMBG.webp"
+    "name": "StellarLane",
+    "avatar": "https://ooo.0x0.ooo/2024/07/29/ORlrtq.png"
   },
   "hero": {
-    "name": "Gyoza",
-    "bio": "A static blog template build with Astro and React.",
-    "description": "Clean, Cute, Fast.",
+    "name": "StellarLane",
+    "bio": "An undergraduate at BME, SJTU.",
+    "description": "游禽寻耀，难抵星极🌠",
     "socials": [
       {
         "name": "Github",
         "icon": "icon-github",
-        "url": "https://github.com/lxchapu/astro-gyoza",
-        "color": "rgb(24, 23, 23)"
+        "url": "https://github.com/StellarLane",
+        "color": "rgb(0, 0, 0)"
       },
       {
-        "name": "X",
-        "icon": "icon-x",
-        "url": "https://twitter.com/lxchapu",
-        "color": "rgb(36, 46, 54)"
+        "name": "QQ",
+        "icon": "icon-qq",
+        "url": "https://ooo.0x0.ooo/2024/06/22/OPxagX.jpg",
+        "color": "rgb(160,216,239)"
       },
       {
         "name": "Email",
         "icon": "icon-mail",
-        "url": "mailto:lxchapu@outlook.com",
-        "color": "rgb(212, 70, 56)"
+        "url": "mailto:stellarlane2@gmail.com",
+        "color": "rgb(244, 179, 194)"
+      },
+      {
+        "name": "steam",
+        "icon": "icon-steam",
+        "url": "https://steamcommunity.com/profiles/76561199518661334/",
+        "color": "rgb(126, 190, 171)"
       }
     ],
-    "yiyan": "当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。"
+    "yiyan": "Let it go as if you wander."
   },
   "color": {
     "accent": [
-      { "light": "#F55555", "dark": "#FCCF31" },
-      { "light": "#0396FF", "dark": "#ABDCFF" },
-      { "light": "#fb7287", "dark": "#99D8CF" },
-      { "light": "#F072B6", "dark": "#FFF886" },
-      { "light": "#9F44D3", "dark": "#E2B0FF" },
-      { "light": "#FF6666", "dark": "#A1CCD1" },
-      { "light": "#F6416C", "dark": "#838BC6" },
-      { "light": "#32CCBC", "dark": "#90F7EC" },
-      { "light": "#33A6B8", "dark": "#79F1A4" },
-      { "light": "#F55555", "dark": "#FCCF31" }
+      { "light": "#478384", "dark": "#c4a3bf" },
+      { "light": "#7ebeab", "dark": "#274a78" },
+      { "light": "#84b9cb", "dark": "#4c6cb3" },
+      { "light": "#c97586", "dark": "#e6b422" },
+      { "light": "#e198b4", "dark": "#c97586" },
+      { "light": "#e198b4", "dark": "#c97586" },
+      { "light": "#e198b4", "dark": "#c97586" },
+      { "light": "#e198b4", "dark": "#c97586" },
+      { "light": "#e198b4", "dark": "#c97586" }
     ],
     "bg": {
       "primary": { "light": "#ffffff", "dark": "#1c1c1e" },
@@ -76,11 +80,6 @@
       "icon": "icon-archive"
     },
     {
-      "name": "项目",
-      "link": "/projects",
-      "icon": "icon-flask"
-    },
-    {
       "name": "关于",
       "link": "/about",
       "icon": "icon-ghost"
@@ -95,7 +94,7 @@
     "perPage": 10
   },
   "footer": {
-    "startTime": "2024-04-14T00:00:00Z"
+    "startTime": "2024-02-25T00:00:00Z"
   },
   "docSearch": {
     "appId": "",
@@ -103,10 +102,10 @@
     "indexName": ""
   },
   "waline": {
-    "serverURL": "https://waline.lxchapu.com"
+    "serverURL": ""
   },
   "sponsor": {
-    "wechat": "https://object.lxchapu.com/bed%2F2024%2F0507_6e3e8f73df2d4e6d.webp"
+    "wechat": ""
   },
   "analytics": {
     "enable": false,
@@ -118,7 +117,7 @@
       "websiteId": ""
     },
     "microsoftClarity": {
-        "projectId": ""
+      "projectId": ""
     }
   }
 }
