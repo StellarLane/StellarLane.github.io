@@ -47,7 +47,7 @@ const isMdContentEmpty = md.body.trim().length === 0
           <p>{md.data.description}</p>
         </header>
         {md.slug === 'friends' && <FriendList />}
-        {md.slug === 'projects' && <ProjectList />}
+        {/* {md.slug === 'projects' && <ProjectList />} */}
         {!isMdContentEmpty && (
           <MarkdownWrapper>
             <Content />
