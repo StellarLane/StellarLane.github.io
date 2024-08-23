@@ -9,3 +9,5 @@ comments: false
 [![ORlCiY.md.jpg](https://ooo.0x0.ooo/2024/07/29/ORlCiY.md.jpg)](https://img.tg/image/ORlCiY)
 
 [![ORlw4v.md.jpg](https://ooo.0x0.ooo/2024/07/29/ORlw4v.md.jpg)](https://img.tg/image/ORlw4v)
+
+[![OtHlrc.md.jpg](https://ooo.0x0.ooo/2024/08/24/OtHlrc.md.jpg)](https://img.tg/image/OtHlrc)
