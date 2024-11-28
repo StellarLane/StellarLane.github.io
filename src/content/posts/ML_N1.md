@@ -6,6 +6,7 @@ tags:
   - python
   - Data Science
 date: 2024-06-22
+summary: 科普视频级别的机器学习：模型训练的大致流程
 ---
 
 ## Tensor
@@ -163,3 +164,7 @@ with torch.no_grad():
 ```
 
 值得一提的是，此处的 `model.train()` 和 `model.eval()` 是两种训练模式，主要区别则在与前者的目的是优化，因此会丢弃部分不够好的数据结果，或者防止过拟合而临时修改网络结构，后者则是用于测试时诚实地反映结果。
+
+> Reference
+>
+> [李宏毅机器学习](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)

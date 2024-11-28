@@ -4,6 +4,7 @@ category: CSDIY
 tags:
   - linux
 date: 2024-05-30
+summary: win11+ubuntu24.04安装记录
 ---
 
 # 双系统安装记录

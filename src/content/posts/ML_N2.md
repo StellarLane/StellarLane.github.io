@@ -6,6 +6,7 @@ tags:
   - python
   - Data Science
 date: 2024-06-27
+summary: 科普视频级别的机器学习：一些常见的优化方法
 ---
 
 ## 一些优化方法
@@ -108,3 +109,7 @@ class ST(nn.Module):
         x_transformed = F.grid_sample(x, grid)  # 变换特征图
         return x_transformed
 ```
+
+> Reference
+>
+> [李宏毅机器学习](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
