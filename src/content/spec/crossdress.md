@@ -7,10 +7,10 @@ comments: false
 > <p style="text-align:right;">24.12</p>
 > From the monster you made me?
 
+![OEMfyt.jpg](https://ooo.0x0.ooo/2024/12/16/OEMfyt.jpg)
+![OEMlsx.jpg](https://ooo.0x0.ooo/2024/12/16/OEMlsx.jpg)
 ![OEM2ep.jpg](https://ooo.0x0.ooo/2024/12/16/OEM2ep.jpg)
 ![OEMjaj.jpg](https://ooo.0x0.ooo/2024/12/16/OEMjaj.jpg)
-![OEMlsx.jpg](https://ooo.0x0.ooo/2024/12/16/OEMlsx.jpg)
-![OEMfyt.jpg](https://ooo.0x0.ooo/2024/12/16/OEMfyt.jpg)
 
 > <p style="text-align:right;">24.10</p>
 > 我可能是正常人，但我是正常人不太可能。
