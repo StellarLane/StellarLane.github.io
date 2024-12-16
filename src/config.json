@@ -26,7 +26,7 @@
       {
         "name": "QQ",
         "icon": "icon-qq",
-        "url": "https://ooo.0x0.ooo/2024/10/13/ODr5vK.jpg",
+        "url": "https://ooo.0x0.ooo/2024/12/16/OEMYUX.jpg",
         "color": "rgb(160,216,239)"
       },
       {
@@ -47,14 +47,8 @@
   "color": {
     "accent": [
       { "light": "#478384", "dark": "#c4a3bf" },
-      { "light": "#7ebeab", "dark": "#274a78" },
-      { "light": "#84b9cb", "dark": "#4c6cb3" },
-      { "light": "#c97586", "dark": "#e6b422" },
-      { "light": "#e198b4", "dark": "#c97586" },
-      { "light": "#e198b4", "dark": "#c97586" },
-      { "light": "#e198b4", "dark": "#c97586" },
-      { "light": "#e198b4", "dark": "#c97586" },
-      { "light": "#e198b4", "dark": "#c97586" }
+      { "light": "#c97586", "dark": "#febdd1" },
+      { "light": "#e198b4", "dark": "#75bad9" }
     ],
     "bg": {
       "primary": { "light": "#ffffff", "dark": "#1c1c1e" },
@@ -70,22 +64,22 @@
   },
   "menus": [
     {
-      "name": "首页",
+      "name": "Home",
       "link": "/",
       "icon": "icon-pantone"
     },
     {
-      "name": "归档",
+      "name": "Archives",
       "link": "/archives",
       "icon": "icon-archive"
     },
     {
-      "name": "关于",
+      "name": "About",
       "link": "/about",
       "icon": "icon-ghost"
     },
     {
-      "name": "友链",
+      "name": "Links",
       "link": "/friends",
       "icon": "icon-hearts"
     }
