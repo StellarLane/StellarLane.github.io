@@ -24,10 +24,16 @@
         "color": "rgb(0, 0, 0)"
       },
       {
+        "name": "Telegram",
+        "icon": "icon-telegram",
+        "url": "/image.png",
+        "color": "#abcdef"
+      },
+      {
         "name": "QQ",
         "icon": "icon-qq",
         "url": "https://ooo.0x0.ooo/2024/12/16/OEMYUX.jpg",
-        "color": "rgb(160,216,239)"
+        "color": "#5A79BA"
       },
       {
         "name": "Email",
