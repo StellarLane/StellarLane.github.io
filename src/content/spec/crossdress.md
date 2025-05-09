@@ -4,6 +4,13 @@ description: 女の子になりたい😖
 comments: false
 ---
 
+> <p style="text-align:right;">25.03</p>
+> 莲瓣入水而不苦根茎, 勿执着
+
+![](/cd/250301.jpg)
+![](/cd/250302.jpg)
+![](/cd/250303.jpg)
+
 > <p style="text-align:right;">24.12</p>
 > From the monster you made me?
 
