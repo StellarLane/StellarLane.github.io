@@ -14,7 +14,7 @@ export function Outdate({ lastMod }: { lastMod: Date }) {
 
   return (
     <AnimatePresence>
-      {isShow && (
+      {false && (
         <motion.div
           className="flex justify-center text-sm p-4 rounded-lg bg-amber-300/10 border border-amber-300"
           initial={{ opacity: 0 }}
