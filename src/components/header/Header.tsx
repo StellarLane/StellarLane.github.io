@@ -20,9 +20,9 @@ export function Header() {
           {isMobile ? <AnimatedLogo /> : <HeaderContent />}
           <HeaderMeta />
         </div>
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <SearchButton />
-        </div>
+        </div> */}
       </div>
     </header>
   )

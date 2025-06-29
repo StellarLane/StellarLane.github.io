@@ -4,6 +4,13 @@ description: 女の子になりたい😖
 comments: false
 ---
 
+> <p style="text-align:right;">25.06</p>
+> 路在迷途
+
+![](/cd/250601.jpg)
+![](/cd/250602.jpg)
+![](/cd/250603.jpg)
+
 > <p style="text-align:right;">25.03</p>
 > 莲瓣入水而不苦根茎, 勿执着
 
