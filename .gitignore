@@ -23,4 +23,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-src/content/posts/*.draft.md
+**/*.draft.md
