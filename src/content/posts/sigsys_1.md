@@ -17,7 +17,7 @@ This course is mainly focused of linear time-invariant systems
 
 ### transformation of independent variable
 
-![alt text](/sigsys_1//sigsys_1/image.png)
+![alt text](/sigsys_1/image.png)
 
 - time scaling x(t) -> x(t/a) (discrete signals often are not "squeezable" though extendable)
 - time shift
@@ -54,7 +54,7 @@ x(t) = |C| e^{\gamma t} \cos(\omega_0 t + \varphi) + j |C| e^{\gamma t} \sin(\om
 $$
 
 The rectangular/Cartesian form of complex exponential signal
-![alt text](/sigsys_1//sigsys_1/image-3.png)
+![alt text](/sigsys_1/image-3.png)
 
 ### Signal decomposition
 
@@ -66,10 +66,10 @@ almost all complex signals can be represented by linear combinations of complex 
 #### (lost) properties
 
 1. phase change != time shift(reverse holds)
-   ![alt text](/sigsys_1//sigsys_1/image-1.png)
+   ![alt text](/sigsys_1/image-1.png)
 2. not neccessarily periodic(only when $2 \pi / \Omega_0$)
 3. different frequencies may not imply different signals
-   ![alt text](/sigsys_1//sigsys_1/image-2.png)
+   ![alt text](/sigsys_1/image-2.png)
 
 ### DT real exponential
 
@@ -120,7 +120,7 @@ unit impulse is the first dif of the unit step, unit step is the running sum of 
 #### CT
 
 it will be ill-defined if we just copy the discrete definitions into the continous field.
-![alt text](/sigsys_1//sigsys_1/image-4.png)
+![alt text](/sigsys_1/image-4.png)
 
 ## Further Introduction to Systems
 
