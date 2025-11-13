@@ -80,6 +80,11 @@
       "icon": "icon-archive"
     },
     {
+      "name": "Gallery",
+      "link": "/gallery",
+      "icon": "icon-heart"
+    },
+    {
       "name": "About",
       "link": "/about",
       "icon": "icon-ghost"
