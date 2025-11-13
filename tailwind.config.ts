@@ -15,7 +15,7 @@ const config: Config = {
         '"Noto Color Emoji"',
       ],
       serif: ['"Noto Serif SC"', '"Source Han Serif SC"', '"Source Han Serif"', 'serif'],
-      mono: ['"JetBrains Mono"', '"Fira Code"', 'Consolas', 'monospace'],
+      mono: ['"Maple Mono NF CN", "JetBrains Mono"', '"Fira Code"', 'Consolas', 'monospace'],
     },
     fontSize: {
       xs: '0.75rem',
@@ -31,6 +31,7 @@ const config: Config = {
     extend: {
       colors: {
         accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        background: 'rgb(var(--color-bg-root) / <alpha-value>)',
       },
       textColor: {
         primary: 'rgb(var(--color-text-primary))',
@@ -45,7 +46,7 @@ const config: Config = {
         primary: 'rgb(var(--color-border-primary))',
       },
       minHeight: {
-        main: 'calc(100vh - 200px)',
+        main: 'calc(100vh - 125px)',
       },
       transitionProperty: {
         'bg-color': 'background-color',

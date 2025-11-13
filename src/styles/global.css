@@ -19,6 +19,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/fonts/MapleMono-[wght].ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/fonts/MapleMono-Italic[wght].ttf');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 ::selection {
   background-color: theme('colors.accent');
   color: white;
