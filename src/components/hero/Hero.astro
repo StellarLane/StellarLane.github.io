@@ -10,9 +10,9 @@ import Highlight from '@/components/Highlight.astro'
   >
     <div class="mt-[120px] lg:mt-0 max-w-[590px]">
       <h1 class="text-3xl text-center lg:text-left text-balance">
-        Hi there, I'm <Highlight class="font-bold">{hero.name}</Highlight>👋<br />{hero.bio}
+        Hi there, I'm <Highlight class="font-bold">{hero.name}</Highlight>👋<br /><span class="text-2xl">{hero.bio}</span>
       </h1>
-      <div class="text-sm text-secondary mt-3 text-center lg:text-left">{hero.description}</div>
+      <div class="text-md text-secondary mt-3 text-center lg:text-left">{hero.description}</div>
       <SocialList className="mt-[60px]" client:load />
     </div>
     <div class="mt-20 lg:mt-0">

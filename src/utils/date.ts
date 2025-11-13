@@ -45,7 +45,7 @@ export function getFormattedDateTime(date: Date) {
   const hours = padZero(date.getHours())
   const minutes = padZero(date.getMinutes())
 
-  return `${year} 年 ${month} 月 ${day} 日 ${hours}:${minutes}`
+  return `${year}.${month}.${day}`
 }
 
 // 获取两个日期的相差的天数

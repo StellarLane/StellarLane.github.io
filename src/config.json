@@ -14,7 +14,7 @@
   },
   "hero": {
     "name": "StellarLane",
-    "bio": "An undergraduate at SJTU.",
+    "bio": "Some random undergrad @ SJTU",
     "description": "游禽寻耀，难抵星极🌠",
     "socials": [
       {
@@ -54,7 +54,7 @@
     "accent": [
       { "light": "#478384", "dark": "#c4a3bf" },
       { "light": "#c97586", "dark": "#febdd1" },
-      { "light": "#e198b4", "dark": "#75bad9" }
+      { "light": "#51a8dd", "dark": "#75bad9" }
     ],
     "bg": {
       "primary": { "light": "#ffffff", "dark": "#1c1c1e" },

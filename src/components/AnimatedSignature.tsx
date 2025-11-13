@@ -1,4 +1,4 @@
-import Svg from '@/assets/signature.svg?raw'
+import Svg from '@/assets/Stellarlane.svg?raw'
 
 export function AnimatedSignature() {
   return (
