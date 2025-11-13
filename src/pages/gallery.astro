@@ -1,34 +1,21 @@
 ---
 import Highlight from '@/components/Highlight.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
-import RoundedRect from '@/components/gallery/cover.astro'
+import { Cover } from '@/components/gallery/Cover'
+import { SecretCover } from '@/components/gallery/SecretCover'
 import 'animate.css'
 ---
 
 <PageLayout title="图集">
-  <div class="max-w-[800px] mx-auto px-4 py-16 h-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- 左列 -->
+  <div class="max-w-[800px] mx-auto px-4 py-32 h-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
       <div class="space-y-4">
-        <div class="flex items-center h-full justify-center">
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <RoundedRect color="bg-accent/50" />
-          </a>
-        </div>
-        <div class={`py-4 flex justify-center text-2xl font-extrabold`}>
-          <Highlight class={`animate__animated animate__fadeInUp animate__faster`}
-            >Precious Daily</Highlight
-          >
+        <div class="flex items-center h-full justify-center select-none">
+            <Cover imgSrc='/gallery/daily/cover.webp' />
         </div>
       </div>
-
-      <!-- 右列 -->
       <div class="hidden md:block space-y-4">
-        <div class="flex items-center h-full justify-center">qwq</div>
+        <div class="flex items-center h-full justify-center text-sm select-none"><SecretCover imgSrc='/gallery/cd/cover.png' client:load/></div>
       </div>
     </div>
   </div>

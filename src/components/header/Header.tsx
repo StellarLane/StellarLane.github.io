@@ -20,9 +20,6 @@ export function Header() {
           {isMobile ? <AnimatedLogo /> : <HeaderContent />}
           <HeaderMeta />
         </div>
-        {/* <div className="flex items-center justify-center">
-          <SearchButton />
-        </div> */}
       </div>
     </header>
   )

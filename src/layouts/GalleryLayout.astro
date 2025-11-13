@@ -1,0 +1,36 @@
+---
+import Layout from './Layout.astro'
+import GalleryTitle from '@/components/gallery/GalleryTitle.astro'
+import { Header } from '@/components/header/Header'
+import Footer from '@/components/footer/Footer.astro'
+import { SearchPanel } from '@/components/SearchPanel'
+import { Provider } from '@/components/provider/Provider'
+import { ToastContainer } from '@/components/ToastContainer'
+import { ModalStack } from '@/components/ui/modal'
+import { HeadGradient } from '@/components/head-gradient'
+import { BackToTopFAB } from '@/components/BackToTopFAB'
+interface Props {
+  title?: string
+  title_cn?: string
+}
+
+const { title, title_cn } = Astro.props
+---
+
+<Layout title={title}>
+  <Provider pathName={Astro.url.pathname} client:only="react" />
+
+  <Header client:only="react" transition:persist="header" />
+  <HeadGradient />
+  <main class="flex flex-col items-center relative z-1 pt-16 min-h-main bg-primary select-none">
+    <HeadGradient client:idle />
+    <GalleryTitle title={title} title_cn={title_cn} />
+    <BackToTopFAB client:only="react" />
+    <slot />
+  </main>
+  <Footer />
+
+  <SearchPanel client:only="react" />
+  <ToastContainer client:only="react" />
+  <ModalStack client:only="react" />
+</Layout>

@@ -1,0 +1,28 @@
+---
+import 'animate.css'
+import Highlight from '../Highlight.astro'
+
+interface Props {
+  id: string
+  prev_id: string
+  next_id: string
+  date?: string
+  photoUrls: string[]
+}
+---
+
+<div id={Astro.props.id} class="max-w-[800px] mx-auto px-4 py-4 h-full">
+  <h1 class="sticky top-20 z-10 text-lg font-regular text-center uppercase mb-8 ">
+    <div class="inline-block rounded-lg bg-white/50 backdrop-blur-xl text-xl font-extrabold px-4 py-2">
+      <Highlight>{Astro.props.date}</Highlight> <a class="iconfont icon-left" href={"#" + Astro.props.prev_id}></a><a class="iconfont icon-right" href={"#" + Astro.props.next_id}></a>
+    </div>
+  </h1>
+
+  <div class="columns-1 md:columns-2 gap-4 space-y-4">
+    {
+      Astro.props.photoUrls.map((url) => (
+        <img src={url} alt="photo" class="w-full rounded-lg break-inside-avoid" />
+      ))
+    }
+  </div>
+</div>
