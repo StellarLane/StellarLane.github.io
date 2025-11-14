@@ -1,47 +1,51 @@
 import { useState } from 'react'
 import { Cover } from './Cover'
-import { Highlight } from '../Highlight'
 
 interface SecretCoverProps {
-    color?: string
-    imgSrc?: string
-    name?: string
-    name_cn?: string
-    link?: string
+  color?: string
+  imgSrc?: string
+  name?: string
+  name_cn?: string
+  link?: string
 }
 
-export function SecretCover({ color = 'bg-accent/30', imgSrc = '/emb_1/image-1.png', name = "\"Preigee\"", name_cn = "\"近地点\"", link = "/crossdress" }: SecretCoverProps) {
-    const [clickCount, setClickCount] = useState(0)
+export function SecretCover({
+  color = 'bg-accent/30',
+  imgSrc = '/emb_1/image-1.png',
+  name = '"Preigee"',
+  name_cn = '"近地点"',
+  link = '/crossdress',
+}: SecretCoverProps) {
+  const [clickCount, setClickCount] = useState(0)
 
-    const handleClick = () => {
-        setClickCount((prev) => prev + 1)
-        console.log(`点击次数: ${clickCount + 1}`)
+  const handleClick = () => {
+    setClickCount((prev) => prev + 1)
+  }
+
+  const renderContent = () => {
+    switch (clickCount) {
+      case 0:
+        return <div className="content content-0">qwq</div>
+      case 1:
+        return <div className="content content-1">qwq?</div>
+      case 2:
+        return <div className="content content-2">ovo</div>
+      case 3:
+        return <div className="content content-3">ovo?</div>
+      default:
+        return (
+          <div className="content content-5">
+            <div>
+              <Cover color={color} imgSrc={imgSrc} name={name} name_cn={name_cn} link={link} />
+            </div>
+          </div>
+        )
     }
+  }
 
-    const renderContent = () => {
-        switch (clickCount) {
-            case 0:
-                return <div className="content content-0">qwq</div>
-            case 1:
-                return <div className="content content-1">qwq?</div>
-            case 2:
-                return <div className="content content-2">awa</div>
-            case 3:
-                return <div className="content content-3">awa?</div>
-            default:
-                return (
-                    <div className="content content-5">
-                        <div>
-                            <Cover color={color} imgSrc={imgSrc} name={name} name_cn={name_cn} link={link} />
-                        </div>
-                    </div>
-                )
-        }
-    }
-
-    return (
-        <div className="SecretCover" onClick={handleClick}>
-            {renderContent()}
-        </div>
-    )
+  return (
+    <div className="SecretCover" onClick={handleClick}>
+      {renderContent()}
+    </div>
+  )
 }

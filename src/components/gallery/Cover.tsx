@@ -1,5 +1,5 @@
-import styles from "./themes/Cover.module.css"
-import { Highlight } from "../Highlight"
+import styles from './themes/Cover.module.css'
+import { Highlight } from '../Highlight'
 
 interface CoverProps {
   color?: string
@@ -9,7 +9,13 @@ interface CoverProps {
   link?: string
 }
 
-export function Cover({ color = 'bg-accent/30', imgSrc = '/emb_1/image-1.png', name = 'Precious Daily', name_cn = "平凡即是喜乐", link = "/daily" }: CoverProps) {
+export function Cover({
+  color = 'bg-accent/30',
+  imgSrc = '/emb_1/image-1.png',
+  name = 'Precious Daily',
+  name_cn = '平凡即是喜乐',
+  link = '/daily',
+}: CoverProps) {
   return (
     <div>
       <div className={styles['fan-wrapper']}>
@@ -41,11 +47,7 @@ export function Cover({ color = 'bg-accent/30', imgSrc = '/emb_1/image-1.png', n
           <div className={`w-72 h-60 rounded-lg ${color}`}>
             <div className="px-4 py-4 flex flex-col h-full">
               <div className="w-88 h-72 rounded-lg bg-accent/100 overflow-hidden">
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={link} rel="noopener noreferrer">
                   <img
                     src={imgSrc}
                     alt="Gallery Image"
@@ -58,13 +60,13 @@ export function Cover({ color = 'bg-accent/30', imgSrc = '/emb_1/image-1.png', n
         </div>
       </div>
       <div className={`py-16 flex flex-col justify-center text-2xl font-extrabold items-center`}>
-        <Highlight className={`animate__animated animate__fadeInUp animate__faster`}
-        >{name}</Highlight>
-        
+        <Highlight className={`animate__animated animate__fadeInUp animate__faster`}>
+          {name}
+        </Highlight>
+
         <div className="w-48 h-px bg-black/10 my-2"></div>
-        
-        <div className={`animate__animated animate__fadeInDown animate__faster`}
-        >{name_cn}</div>
+
+        <div className={`animate__animated animate__fadeInDown animate__faster`}>{name_cn}</div>
       </div>
     </div>
   )

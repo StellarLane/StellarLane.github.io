@@ -40,23 +40,6 @@ export async function getSortedPosts() {
   })
 }
 
-// 获取所有文章的字数
-export async function getAllPostsWordCount() {
-  const allPosts = await getAllPosts()
-
-  const promises = allPosts.map((post) => {
-    return post.render()
-  })
-
-  const res = await Promise.all(promises)
-
-  const wordCount = res.reduce((count, cur) => {
-    return count + cur.remarkPluginFrontmatter.words
-  }, 0)
-
-  return wordCount
-}
-
 // 转换为 URL 安全的 slug，删除点，空格转为短横线，大写转为小写
 export function slugify(text: string) {
   return text.replace(/\./g, '').replace(/\s/g, '-').toLowerCase()

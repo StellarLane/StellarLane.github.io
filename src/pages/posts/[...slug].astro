@@ -9,11 +9,9 @@ import { PostToc } from '@/components/post/PostToc'
 import PostMetaInfo from '@/components/post/PostMetaInfo.astro'
 import PostArchiveInfo from '@/components/post/PostArchiveInfo.astro'
 import { ReadingProgress } from '@/components/post/ReadingProgress'
-import { Outdate } from '@/components/post/Outdate'
 import PostNav from '@/components/post/PostNav.astro'
-import { Comments } from '@/components/comment'
 import { ActionAside } from '@/components/post/ActionAside'
-import { PostCopyright } from '@/components/post/PostCopyright'
+import { PostSignature } from '@/components/post/PostCopyright'
 
 export const getStaticPaths = (async () => {
   const sortedPosts = await getSortedPosts()
@@ -78,9 +76,7 @@ const lastMod = current.data.lastMod || current.data.date
           category={current.data.category}
           tags={current.data.tags}
         />
-        <div>
-          <!-- <Outdate lastMod={lastMod} client:idle /> -->
-        </div>
+        <div></div>
       </header>
     </div>
     <div class="col-start-1 min-w-0">
@@ -100,7 +96,7 @@ const lastMod = current.data.lastMod || current.data.date
     </div>
     <div>
       <section class="space-y-6">
-        <PostCopyright title={current.data.title} slug={mdSlug} lastMod={lastMod} client:visible />
+        <PostSignature title={current.data.title} slug={mdSlug} lastMod={lastMod} client:visible />
         <PostNav prev={prev} next={next} />
         <!-- {current.data.comments && <Comments />} -->
       </section>

@@ -3,25 +3,27 @@ import GalleryLayout from '@/layouts/GalleryLayout.astro'
 import OneRelease from '@/components/gallery/OneRelease.astro'
 import 'animate.css'
 
-const pic_root_dir = "/gallery/cd/"
+const pic_root_dir = '/gallery/cd/'
 // small helper: generate range of numbers (inclusive)
 const range = (start: number, end: number, step: number = 1): number[] => {
-  const out: number[] = [];
-  for (let i = start; i <= end; i += step) out.push(i);
-  return out;
-};
+  const out: number[] = []
+  for (let i = start; i <= end; i += step) out.push(i)
+  return out
+}
 
-const pic_2511 = range(0, 11).map(n => `${pic_root_dir}2511/2511_${n}.jpg`);
-const pic_2506 = range(0, 9).map(n => `${pic_root_dir}2506/2506_${n}.jpg`);
-const pic_2503 = range(0, 8).map(n => `${pic_root_dir}2503/2503_${n}.jpg`);
-const pic_2412 = range(0, 11).map(n => `${pic_root_dir}2412/2412_${n}.jpg`);
-const pic_2410 = range(0, 4).map(n => `${pic_root_dir}2410/2410_${n}.jpg`);
-const pic_2407 = range(0, 7).map(n => `${pic_root_dir}2407/2407_${n}.jpg`);
-const pic_2403 = range(0, 3).map(n => `${pic_root_dir}2403/2403_${n}.jpg`);
+const pic_2511 = range(0, 11).map((n) => `${pic_root_dir}2511/2511_${n}.jpg`)
+const pic_2506 = range(0, 9).map((n) => `${pic_root_dir}2506/2506_${n}.jpg`)
+const pic_2503 = range(0, 8).map((n) => `${pic_root_dir}2503/2503_${n}.jpg`)
+const pic_2412 = range(0, 11).map((n) => `${pic_root_dir}2412/2412_${n}.jpg`)
+const pic_2410 = range(0, 4).map((n) => `${pic_root_dir}2410/2410_${n}.jpg`)
+const pic_2407 = range(0, 7).map((n) => `${pic_root_dir}2407/2407_${n}.jpg`)
+const pic_2403 = range(0, 3).map((n) => `${pic_root_dir}2403/2403_${n}.jpg`)
 ---
 
 <GalleryLayout title='"Perigee"' title_cn='"近地点"'>
-  <div class="flex flex-col items-center justify-center max-w-[800px] mx-auto h-full animate__animated animate__fadeIn animate__delay-1s">
+  <div
+    class="flex flex-col items-center justify-center max-w-[800px] mx-auto h-full animate__animated animate__fadeIn animate__delay-1s"
+  >
     <OneRelease id="2511" prev_id="2506" next_id="2511" date="25.11" photoUrls={pic_2511} />
     <OneRelease id="2506" prev_id="2503" next_id="2511" date="25.06" photoUrls={pic_2506} />
     <OneRelease id="2503" prev_id="2412" next_id="2506" date="25.03" photoUrls={pic_2503} />

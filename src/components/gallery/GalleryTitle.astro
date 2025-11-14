@@ -7,51 +7,49 @@ interface Props {
 import 'animate.css'
 ---
 
-
 <div class="flex flex-col mt-10 w-1/2">
-  <h1 class="text-xl font-extrabold text-center uppercase title_en font ">
+  <h1 class="text-lg font-extrabold text-center uppercase title_en font">
     {Astro.props.title}
   </h1>
-  <h1 class="text-xl font-light mb-8 text-center text-accent animate__animated animate__fadeInDown animate__delay-0.5s title_cn font">
+  <h1
+    class="text-xl font-extrabold mb-8 text-center text-accent animate__animated animate__fadeInDown animate__delay-0.5s title_cn font"
+  >
     {Astro.props.title_cn}
   </h1>
 </div>
 
 <style>
+  @media (min-width: 1024px) {
+    @keyframes spreadWords {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        letter-spacing: 1.85rem;
+        margin-right: -1.85rem;
+      }
+    }
 
-@media (min-width: 1024px) {
-  @keyframes spreadWords {
-  0% {
-    letter-spacing: 2.5rem;
-    margin-right: -2.5rem;
+    .title_cn {
+      letter-spacing: 2rem;
+      margin-right: -2rem;
+    }
+    .title_en {
+      letter-spacing: 1.5rem;
+      margin-right: -1.5rem;
+      animation: spreadWords 1.5s forwards;
+    }
   }
-  100% {
-    letter-spacing: 3rem;
-    margin-right: -3rem;
+
+  @media (max-width: 1024px) {
+    .title_en {
+      animation: fadeInUp;
+      animation-duration: 1s;
+    }
+    .title_cn {
+      letter-spacing: 0.1rem;
+      margin-right: -0.1rem;
+    }
   }
-}
-
-  .title_cn {
-    letter-spacing: 2rem;
-    margin-right: -2rem;
-  }
-  .title_en {
-    animation: spreadWords 1s forwards;
-  }
-}
-
-
-
-@media (max-width: 1024px) {
-  .title_en {
-    animation: fadeInUp;
-    animation-duration: 1s
-  }
-  .title_cn {
-    letter-spacing: 0.1rem;
-    margin-right: -0.1rem;
-  }
-}
-
-
 </style>

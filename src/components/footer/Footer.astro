@@ -1,16 +1,10 @@
 ---
 import { author, footer } from '@/config.json'
-import { getAllPostsWordCount } from '@/utils/content'
-import { RunningDays } from './RunningDays'
 import Link from './Link.astro'
 
 const sinceYear = new Date(footer.startTime).getFullYear()
 const thisYear = new Date().getFullYear()
 const copyDate = sinceYear === thisYear ? thisYear : `${sinceYear} - ${thisYear}`
-
-const wordCount = await getAllPostsWordCount()
-
-const wordCountStr = (wordCount / 1000).toFixed(1) + 'k'
 ---
 
 <footer class="relative z-1 py-8 px-4 md:px-8 border-t border-primary text-secondary text-sm">

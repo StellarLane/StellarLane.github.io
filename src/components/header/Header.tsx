@@ -1,6 +1,5 @@
 import { BluredBackground } from './BluredBackground'
 import { HeaderContent } from './HeaderContent'
-import { SearchButton } from './SearchButton'
 import { AnimatedLogo } from './AnimatedLogo'
 import { HeaderMeta } from './HeaderMeta'
 import { HeaderDrawer } from './HeaderDrawer'

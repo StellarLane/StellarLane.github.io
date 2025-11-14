@@ -42,9 +42,6 @@ export function getFormattedDateTime(date: Date) {
   const year = date.getFullYear()
   const month = padZero(date.getMonth() + 1)
   const day = padZero(date.getDate())
-  const hours = padZero(date.getHours())
-  const minutes = padZero(date.getMinutes())
-
   return `${year}.${month}.${day}`
 }
 
