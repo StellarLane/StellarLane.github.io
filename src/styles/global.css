@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'Maple Mono NF CN';
-  src: url('/fonts/MapleMono-[wght].ttf');
+  src: url('/fonts/MapleMono.ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: 'Maple Mono NF CN';
-  src: url('/fonts/MapleMono-Italic[wght].ttf');
+  src: url('/fonts/MapleMono-Italic.ttf');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
