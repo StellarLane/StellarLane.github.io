@@ -15,7 +15,7 @@ const config: Config = {
         '"Noto Color Emoji"',
       ],
       serif: ['"Noto Serif SC"', '"Source Han Serif SC"', '"Source Han Serif"', 'serif'],
-      mono: ['"Maple Mono NF CN", "JetBrains Mono"', '"Fira Code"', 'Consolas', 'monospace'],
+      mono: ['"Go Mono", "JetBrains Mono"', '"Fira Code"', "Noto Serif SC", 'Consolas', 'monospace'],
     },
     fontSize: {
       xs: '0.75rem',

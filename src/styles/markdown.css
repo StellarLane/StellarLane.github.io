@@ -163,3 +163,12 @@
 .markdown h4 + * {
   @apply mt-0;
 }
+
+.markdown .katex-display {
+  @apply overflow-x-auto overflow-y-hidden;
+  @apply my-5 max-w-full;
+}
+
+.markdown .katex-display > .katex {
+  @apply max-w-max;
+}
