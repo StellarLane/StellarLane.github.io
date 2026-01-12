@@ -17,7 +17,7 @@ This course is mainly focused of linear time-invariant systems
 
 ### transformation of independent variable
 
-![alt text](/sigsys_1/image.png)
+![alt text](/sigsys_1/image.webp)
 
 - time scaling x(t) -> x(t/a) (discrete signals often are not "squeezable" though extendable)
 - time shift
@@ -54,7 +54,7 @@ x(t) = |C| e^{\gamma t} \cos(\omega_0 t + \varphi) + j |C| e^{\gamma t} \sin(\om
 $$
 
 The rectangular/Cartesian form of complex exponential signal
-![alt text](/sigsys_1/image-3.png)
+![alt text](/sigsys_1/image-3.webp)
 
 ### Signal decomposition
 
@@ -66,10 +66,10 @@ almost all complex signals can be represented by linear combinations of complex 
 #### (lost) properties
 
 1. phase change != time shift(reverse holds)
-   ![alt text](/sigsys_1/image-1.png)
+   ![alt text](/sigsys_1/image-1.webp)
 2. not neccessarily periodic(only when $2 \pi / \Omega_0$)
 3. different frequencies may not imply different signals
-   ![alt text](/sigsys_1/image-2.png)
+   ![alt text](/sigsys_1/image-2.webp)
 
 ### DT real exponential
 
@@ -120,7 +120,7 @@ unit impulse is the first dif of the unit step, unit step is the running sum of 
 #### CT
 
 it will be ill-defined if we just copy the discrete definitions into the continous field.
-![alt text](/sigsys_1/image-4.png)
+![alt text](/sigsys_1/image-4.webp)
 
 ## Further Introduction to Systems
 
@@ -473,7 +473,7 @@ a_{\pm k} = 0 \text{ for } |k| \ge 3
 $$
 
 and we will get two plots:
-![alt text](/sigsys_1/image-5.png)
+![alt text](/sigsys_1/image-5.webp)
 both parts are critical for describing a signal, if a signal has shifted in the time domain, the magnitude spectrum will very likely to remain unchanged while the phase spectrum will have changes(and it's not simply a shift in the whole pattern)
 
 ## Spectrum Analysis for LTI Systems
@@ -512,7 +512,7 @@ Output is a periodic signal with the same period & a spectrum of $b_k = a_k H(jk
 
 ---
 
-![alt text](/sigsys_1/image-6.png)
+![alt text](/sigsys_1/image-6.webp)
 
 #### Advantages
 
@@ -536,16 +536,16 @@ So the filters is mostly a function for H(j$\omega$)
   ![alt text](/sigsys_1/image-24)
 
 - Type two filters(requency-shaping filters): most reshape, not completely kill or live
-  ![alt text](/sigsys_1/image-7.png)
+  ![alt text](/sigsys_1/image-7.webp)
   (actually this is the filter for differentiater)
 
 ## Performing Fourier Transform on Aperiodic Functions
 
-![alt text](/sigsys_1/image-8.png)
-![alt text](/sigsys_1/image-9.png)
-![alt text](/sigsys_1/image-10.png)
-![alt text](/sigsys_1/image-11.png)
-![alt text](/sigsys_1/image-12.png)
+![alt text](/sigsys_1/image-8.webp)
+![alt text](/sigsys_1/image-9.webp)
+![alt text](/sigsys_1/image-10.webp)
+![alt text](/sigsys_1/image-11.webp)
+![alt text](/sigsys_1/image-12.webp)
 
 ---
 
@@ -670,7 +670,7 @@ which is also the same with
 
   - Fourier series: Suppose $x(t) \overset{\text{F.S.}}{\longrightarrow} a_k$, and $a_0 = 0$, then $\int_{-\infty}^{t} x(\tau)dt \overset{\text{F.S.}}{\longrightarrow} \frac{a_k}{jk\omega_0}$
   - Why this happens?
-    ![alt text](/sigsys_1/image-13.png)
+    ![alt text](/sigsys_1/image-13.webp)
     so this is actually the same with the fourier series, but in series we can explicitly say $a_0$ = 0, but this is often not the case for fourier transform, so we have to add this term, which is actually the area under the curve.
 
 ### Parseval's Theorem
@@ -704,7 +704,7 @@ If $x(t) \overset{\mathcal{F}}{\longleftrightarrow} X(j\omega)$, then $X(t) \ove
 ### Convolution
 
 recall this
-![alt text](/sigsys_1/image-6.png)
+![alt text](/sigsys_1/image-6.webp)
 
 now we find that this so-called frequency response is the Fourier Transform of the impulse responce, from we can derive the convolution property:
 
@@ -749,7 +749,7 @@ still easy, $H(j \omega) = H_1(j \omega) + H_2(j \omega)$
 **Feedback Systems**
 
 where things get compilcated, take below as an example
-![alt text](/sigsys_1/image-16.png)
+![alt text](/sigsys_1/image-16.webp)
 $$Y(j \omega) = Z(j \omega) H_1(j \omega), \space Z(j \omega) = X(j \omega) - H_2(j \omega) Y(j \omega)$$
 
 $$\text{plug the second into the first: } Y(j \omega) = (X(j \omega) - H_2(j \omega)Y(j \omega))H_1(j \omega)$$
@@ -786,8 +786,8 @@ $$
 
 ---
 
-![alt text](/sigsys_1/image-15.png)
-![alt text](/sigsys_1/image-14.png)
+![alt text](/sigsys_1/image-15.webp)
+![alt text](/sigsys_1/image-14.webp)
 
 ## Time-Frequency Analysis of LTI/LCCDE Systems
 
@@ -803,7 +803,7 @@ So we know that, if the phase is linear, it will delay the signal, which is some
 
 And there is something we don't want more: if the phase is non-linear, then the delay for different frequencies will be different, causing distortions and errors.
 
-![alt text](/sigsys_1/image-20.png)
+![alt text](/sigsys_1/image-20.webp)
 
 ### The Bode Plot
 
@@ -817,7 +817,7 @@ A very good thing of the spectrum bode plot is that it transforms the multiplica
 
 And for the bode plot of phase, while the Y-axis keeps it's original phase, the X is in a log scale, like the spectrum bode plot.
 
-![alt text](/sigsys_1/image-21.png)
+![alt text](/sigsys_1/image-21.webp)
 
 #### Asymptotic Bode Plots
 
@@ -834,7 +834,7 @@ $$H(j\omega) = \frac{1}{1+j \omega \tau}$$
   - When $\omega \approx 10/\tau$, $(**)\approx -\text{atan } 10 \approx -\frac{\pi}{2}$
 
 so it looks like
-![alt text](/sigsys_1/image-22.png)
+![alt text](/sigsys_1/image-22.webp)
 
 #### How to Draw Asymptotic Bode Polts
 
@@ -850,7 +850,7 @@ so it looks like
 
 ### Signal to Sample
 
-![alt text](/sigsys_1/image-17.png)
+![alt text](/sigsys_1/image-17.webp)
 
 $$p(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$
 Where T is the sampling period, then
@@ -873,7 +873,7 @@ If we are lucky, the gap is wide enough so there is no overlap, we will have a "
 
 But there are times we are not so lucky, where the gap is not that wide and there is an overlap, then spectrums start distorting each other, and now there is no way to recover it perfectly.
 
-![alt text](/sigsys_1/image-18.png)
+![alt text](/sigsys_1/image-18.webp)
 
 So we quantify the "gap" here and we get the Nyquist-Shannon Sampling Theorem:
 
@@ -886,7 +886,7 @@ Let $x(t)$ be any band-limited signal with $X(j\omega) = 0$ for $|\omega| > \ome
 
 In practice, we don't use impulses that often, we use a sort of sampling type called, zero-on-hold, aka sample-on-hold. Generally, instead of just having an impulse on the sample point, it will keep the value, until the next sample point, making a stair like sample result.
 
-![alt text](/sigsys_1/image-19.png)
+![alt text](/sigsys_1/image-19.webp)
 
 will this seems like a small change, it's not that beautiful in the frequency domain. First, we need to know that this is mathematically the impulse sample convolves with h(t), where $h(t) = 1 (0 < t < T), 0 \text{ for others}$, and the spectrum for h(t) is $H_0(j\omega) = \frac{2\text{Sin}(\omega T / 2)}{\omega}e^{-j\frac{\omega T}{2}}$, a nasty one!
 
@@ -951,7 +951,7 @@ $$X(j\omega)=\int_{-\infty}^{\infty} x(t)e^{-j\omega t} dt$$
 
 如果我们想可视化拉普拉斯变换的光谱, 按照傅里叶变换的画法, 我们需要画一个凹凸不平的曲面, 虽然对电脑没问题, 但如果想手绘的话显然需要一些画工. 显然大部分时候我们都不需要所有 $\sigma$ 对应的拉普拉斯变换后的频谱, 我们可能更关心特殊情况, 比如什么时候是零点, 极值点, 这就可以用零极点图来表示, 也就是把所有的 $\sigma$ 取值画在一个平面上, 然后把对应的 $X(s)$ 的零点和极点标出来. 按照惯例我们把零点用圈圈, 极点用叉叉标s平面上标出来, 再用虚线和阴影标出可行域.
 
-![alt text](/sigsys_1/image-23.png)
+![alt text](/sigsys_1/image-23.webp)
 
 #### ROC的性质
 

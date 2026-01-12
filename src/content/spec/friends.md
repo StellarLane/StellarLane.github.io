@@ -12,6 +12,6 @@ comments: false
 
 网站链接：https://stellarlane.github.io/
 
-网站头像：https://stellarlane.github.io/avatar.png
+网站头像：https://stellarlane.github.io/avatar.webp
 
 网站简介：Life's short, why does it take so long?

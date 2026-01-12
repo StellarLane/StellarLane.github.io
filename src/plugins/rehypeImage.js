@@ -1,5 +1,6 @@
 import { h } from 'hastscript'
 import { visit } from 'unist-util-visit'
+import { site } from '../config.json'
 
 export function rehypeImage() {
   return function (tree) {
@@ -18,8 +19,14 @@ export function rehypeImage() {
 
 function buildImage(node) {
   const imgProps = node.properties
+  let src = imgProps.src
 
-  return h('img', { ...imgProps, loading: 'lazy' })
+  // 如果配置了 CDN 且图片路径以 / 开头（说明是本地资源）
+  if (site.cdn && src && src.startsWith('/')) {
+    src = site.cdn + src
+  }
+
+  return h('img', { ...imgProps, src, loading: 'lazy' })
 }
 
 function buildFigure(node) {

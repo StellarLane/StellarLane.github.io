@@ -2,6 +2,7 @@
 import PageLayout from '@/layouts/PageLayout.astro'
 import { Cover } from '@/components/gallery/Cover'
 import { SecretCover } from '@/components/gallery/SecretCover'
+import { getAssetUrl } from '@/utils/content'
 import 'animate.css'
 ---
 
@@ -10,12 +11,12 @@ import 'animate.css'
     <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
       <div class="space-y-4">
         <div class="flex items-center h-full justify-center select-none">
-          <Cover imgSrc="/gallery/daily/cover.webp" />
+          <Cover imgSrc={getAssetUrl('/gallery/daily/cover.webp')} />
         </div>
       </div>
       <div class="hidden md:block space-y-4">
         <div class="flex items-center h-full justify-center text-sm select-none">
-          <SecretCover imgSrc="/gallery/cd/cover.png" client:load />
+          <SecretCover imgSrc={getAssetUrl('/gallery/cd/cover.webp')} client:load />
         </div>
       </div>
     </div>

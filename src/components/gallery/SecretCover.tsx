@@ -11,9 +11,9 @@ interface SecretCoverProps {
 
 export function SecretCover({
   color = 'bg-accent/30',
-  imgSrc = '/emb_1/image-1.png',
-  name = '"Preigee"',
-  name_cn = '"近地点"',
+  imgSrc = '/emb_1/image-1.webp',
+  name = '「Preigee」',
+  name_cn = '「近地点」',
   link = '/crossdress',
 }: SecretCoverProps) {
   const [clickCount, setClickCount] = useState(0)

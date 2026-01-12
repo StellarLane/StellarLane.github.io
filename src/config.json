@@ -5,12 +5,13 @@
     "description": "BME, CS, and my ordinary life",
     "keywords": "计算机科学,CS,DIY,生物医学工程,BME,自学",
     "lang": "zh-CN",
-    "favicon": "/webicon.png",
-    "appleTouchIcon": "/webicon.png"
+    "favicon": "https://worker.stellarlane2.workers.dev/public/webicon.webp",
+    "appleTouchIcon": "https://worker.stellarlane2.workers.dev/public/webicon.webp",
+    "cdn": "https://worker.stellarlane2.workers.dev/public"
   },
   "author": {
     "name": "StellarLane",
-    "avatar": "/avatar.png"
+    "avatar": "https://worker.stellarlane2.workers.dev/public/avatar.webp"
   },
   "hero": {
     "name": "StellarLane",

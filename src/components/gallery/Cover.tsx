@@ -11,7 +11,7 @@ interface CoverProps {
 
 export function Cover({
   color = 'bg-accent/30',
-  imgSrc = '/emb_1/image-1.png',
+  imgSrc = '/emb_1/image-1.webp',
   name = 'Precious Daily',
   name_cn = '平凡即是喜乐',
   link = '/daily',

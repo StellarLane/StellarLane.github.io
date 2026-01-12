@@ -14,7 +14,7 @@ summary: 背多分科目, 你说折磨吧也确实挺折磨的, 但算平均work
 
 ### 一般医学仪器框图
 
-![alt text](/medinst/image-7.png)
+![alt text](/medinst/image-7.webp)
 
 **组成部分:**
 
@@ -42,8 +42,8 @@ summary: 背多分科目, 你说折磨吧也确实挺折磨的, 但算平均work
 
 #### 按仪器风险程度分类
 
-![alt text](/medinst/image-8.png)
-![alt text](/medinst/image-9.png)
+![alt text](/medinst/image-8.webp)
+![alt text](/medinst/image-9.webp)
 基本上就是除了接触皮肤的可能是I类以外其他接触人体的基本上都是II类往上, 有源的全部是二类往上
 一些例子: 创口贴是I类, 心电图机, 体温计是II类, PET, CT成像软件和硬件都是III类
 
@@ -61,11 +61,11 @@ summary: 背多分科目, 你说折磨吧也确实挺折磨的, 但算平均work
 心脏共有两个结，结有周期搏动的特性：窦房结与房室结，其中**窦房结是心脏自然的起搏点**， 非正常情况下可能由房室结起搏。电流的传导通过一束细胞来传导，由窦房结经由前、中、后结间束传导至房室结， 引起心房收缩。房室结会将电信号延迟110ms，防止心房室同时收缩。后续通过各类束，普氏纤维网将电信号传导至各个部位，使心室收缩
 心电图测量：检测频率范围0.05hz～100hz，10μV(胎儿)～5mV(成人)之间
 
-![alt text](/medinst/image-10.png)
+![alt text](/medinst/image-10.webp)
 
 ### 心电图机
 
-![alt text](/medinst/image-13.png)
+![alt text](/medinst/image-13.webp)
 
 #### 导联
 
@@ -75,12 +75,12 @@ summary: 背多分科目, 你说折磨吧也确实挺折磨的, 但算平均work
 - 双极导联：两个测量端输入
 - Einthoven三角形：三个双极导联和三个单极导联
 
-![alt text](/medinst/image.png)
+![alt text](/medinst/image.webp)
 
 - Wilson中心电端：在三个肢体上各串连一只5～300k的电阻，使三个肢体端与心脏间的电阻数值互相接近，因而把他们连接起来获得一个公共点（威尔逊中心电端），其电压是电极上的电压平均值
   其可以在单极导联中消除共模噪声，保持参考电压稳定。现代心电图机中单极导联测量是以中心电端作为负极的
 - 加压导联: 改变电路使加压导联相较普通单极导联的电压信号大50%
-  ![alt text](/medinst/image-11.png)
+  ![alt text](/medinst/image-11.webp)
 - **现代心电图机最常用的标准十二导联**:
   - 双极导联3个: I, II, III
   - 加压导联3个: aVR, aVL, aVF
@@ -99,7 +99,7 @@ summary: 背多分科目, 你说折磨吧也确实挺折磨的, 但算平均work
 
 ##### 差分放大器
 
-![alt text](/medinst/image-12.png)
+![alt text](/medinst/image-12.webp)
 
 由电路理论知识我们知道
 
@@ -115,17 +115,17 @@ $V_2 = 0$ 时, $V_{out_2}=-\frac{R_3}{R_1}V_1$
 
 ##### 加法器
 
-![alt text](/medinst/image-16.png)
+![alt text](/medinst/image-16.webp)
 
 当 $R_1 = R_2 = R_3$ 时, 有 $V_{out} = V_1 +V_2$
 
 ##### 实际用于前置放大器的差分放大器（集成运算放大器）
 
-![alt text](/medinst/image-3.png)
+![alt text](/medinst/image-3.webp)
 
 前两个运放有效提高了输入阻抗和共模抑制比
-![alt text](/medinst/image-4.png)
-![alt text](/medinst/image-5.png)
+![alt text](/medinst/image-4.webp)
+![alt text](/medinst/image-5.webp)
 
 心电图机的大体结构与电路示意
 
@@ -144,13 +144,13 @@ $V_2 = 0$ 时, $V_{out_2}=-\frac{R_3}{R_1}V_1$
 
 #### 右腿驱动电路
 
-![alt text](/medinst/image-14.png)
+![alt text](/medinst/image-14.webp)
 
 右腿驱动电路图
 
 ![alt text](https://pic1.zhimg.com/v2-f1697eb5b62f514182acf6b3d5be0e98_1440w.jpg)
 
-![alt text](/medinst/image-43.png)
+![alt text](/medinst/image-43.webp)
 
 $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0 
 \space => \space v_{cm}\frac{R_{RL}i_d}{1+2 \frac{R_f}{R_a}}$
@@ -180,7 +180,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 
 #### 脑电图机的结构
 
-![alt text](/medinst/image-38.png)
+![alt text](/medinst/image-38.webp)
 
 脑电图机结构框图
 
@@ -204,7 +204,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 
 #### 肌电图机的结构
 
-![alt text](/medinst/image-39.png)
+![alt text](/medinst/image-39.webp)
 
 肌电图机结构框图
 
@@ -219,7 +219,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 血液对血管壁的压力, 通常指上臂肱动脉的血压, 来源是心脏的射血力, 分为了收缩压(心室收缩)和舒张压(心室舒张)两种, 脉压则是二者之差
 高血压 >140/90 低血压 <90/60 脉压异常增大>40 脉压异常减小<30
 
-![alt text](/medinst/image-40.png)
+![alt text](/medinst/image-40.webp)
 
 间接测量法血压检测仪器框图
 
@@ -258,11 +258,11 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 
 除此自外常见的体温监测仪器也包括热像仪和光纤温度传感器
 
-![alt text](/medinst/image-41.png)
+![alt text](/medinst/image-41.webp)
 
 红外测温仪原理框图
 
-![alt text](/medinst/image-42.png)
+![alt text](/medinst/image-42.webp)
 
 通用测温仪原理框图
 
@@ -273,7 +273,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 
 ### 血气分析仪
 
-![alt text](/medinst/image-17.png)
+![alt text](/medinst/image-17.webp)
 
 血气分析仪框图
 
@@ -301,7 +301,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 - 直接监测时, 可借助血管内的光纤导管进行血氧监测, 适用于重症监护和心脏手术等
 - 间接监测(夹手指)时, 需要注意的干扰因素是除了动脉血以外还有各类组织和静脉血等, 所以一般是测差值
 
-![alt text](/medinst/image-18.png)
+![alt text](/medinst/image-18.webp)
 
 注意这里的"交流"和"直流"不是指电, 而是指光信号, 其中直流部分是指例如被骨骼, 各类组织, 静脉血和非搏动性动脉血所吸收的的部分, 稳定不会有周期性变化, 而交流部分就是指会发生周期性变化的光信号, 如搏动静脉血, 测量二者除了可以测得血氧含量之外还可以测量得到脉搏等信息
 
@@ -312,7 +312,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 - 呼吸监测仪器的原理: 呼吸引起的胸部运动导致体表容抗和胸腔体积的变化:
   - 测量方法: 热敏电阻法, 呼吸感应描述法, 呼吸压力测量法, 生物阻抗法
 
-![alt text](/medinst/image-19.png)
+![alt text](/medinst/image-19.webp)
 
 呼吸检测仪器框图
 
@@ -329,7 +329,7 @@ $2 \frac{v_{cm}}{R_a} + \frac{v_0}{R_f}, v_{cm} = R_{RL}i_d+v_0
 #### 计算机X射线摄影 (CR, computer radiography)
 
 使用光激发发光存储磷光体作为X射线成像设备
-![alt text](/medinst/image-20.png)
+![alt text](/medinst/image-20.webp)
 
 CR系统框图
 
@@ -366,7 +366,7 @@ DSA是一种造影策略而非一种硬件设备, 不过其也对使用的X线�
 
 ### CT (Computed Tomography, 计算机断层成像设备)
 
-![alt text](/medinst/image-21.png)
+![alt text](/medinst/image-21.webp)
 
 CT结构框图; 运行流程: X线经过准直器形成很薄的扇形X线束, 探测器将X线转换为电信号, 放大并A/D转换为数字信号, 计算机重建并显示
 
@@ -429,7 +429,7 @@ X线治疗机的基本组成:
 
 目前最常使用的是NaI/TI晶体, 其可以利用电离辐射在某些物质中的闪光进行探测(闪烁体探测器)
 
-![alt text](/medinst/image-22.png)
+![alt text](/medinst/image-22.webp)
 
 $\gamma$相机框图
 
@@ -535,7 +535,7 @@ PET的显像剂通常采用18-F, 11-C, 15-O, 13-N这类体内常见元素的放�
 
 测定样品中$\beta$射线的放射性活度, 使用的核素为发生$\beta$衰变的核素, 如3H, 14C, 32P, 33P, 35S等
 
-![alt text](/medinst/image-23.png)
+![alt text](/medinst/image-23.webp)
 
 液闪仪工作原理与框图: 使用的闪烁体传感器为液态, 对低能$\beta$射线探测更高效, 且含有两个PMT, 可以使用符合电路增加准确度
 
@@ -595,7 +595,7 @@ PET的显像剂通常采用18-F, 11-C, 15-O, 13-N这类体内常见元素的放�
 
 其最重要的两个参数是起搏频率和幅度宽度, 一般来说, 脉宽越长, 成功起搏所需的幅度越小
 
-![alt text](/medinst/image-24.png)
+![alt text](/medinst/image-24.webp)
 
 非同步心脏起搏器框图
 
@@ -627,7 +627,7 @@ PET的显像剂通常采用18-F, 11-C, 15-O, 13-N这类体内常见元素的放�
 - 按需功能控制器: 提供稳定的反拗期, 防止T波或者起搏脉冲后电位的误触发, 反拗期后无R波后发起脉冲
 - 脉冲发生器: 发起脉冲
 
-![alt text](/medinst/image-25.png)
+![alt text](/medinst/image-25.webp)
 
 R波抑制型心脏起搏器结构框图
 
@@ -635,7 +635,7 @@ R波抑制型心脏起搏器结构框图
 
 如果患者的房室传导系统阻滞, 心房信号不能正常传导至心室, 则监测需要放在心房, 当检测到P波时经过时当延迟后产生起搏脉冲刺激心室部位
 
-![alt text](/medinst/image-26.png)
+![alt text](/medinst/image-26.webp)
 
 P波同步起搏器的基本结构框图
 
@@ -681,7 +681,7 @@ P波同步起搏器的基本结构框图
   - 血液透析的关键部分: 完成溶质弥散与超滤过程
   - 包含: 透析膜及其支撑结构
 
-![alt text](/medinst/image-27.png)
+![alt text](/medinst/image-27.webp)
 
 人工肾工作原理图
 
@@ -693,13 +693,13 @@ P波同步起搏器的基本结构框图
 
 #### 呼吸机的结构与工作模式
 
-![alt text](/medinst/image-28.png)
+![alt text](/medinst/image-28.webp)
 
 呼吸机基本结构框图
 
 呼吸机包含气源, 供气及驱动装置, 空氧混合气, 主机, 湿化加热装置, 呼吸气路
 
-![alt text](/medinst/image-29.png)
+![alt text](/medinst/image-29.webp)
 
 呼吸机工作原理框图
 
@@ -719,7 +719,7 @@ P波同步起搏器的基本结构框图
 
 麻醉机是吸入全身麻醉和呼吸管理的专用设备
 
-![alt text](/medinst/image-30.png)
+![alt text](/medinst/image-30.webp)
 
 麻醉机基本原理框图
 
@@ -772,7 +772,7 @@ P波同步起搏器的基本结构框图
 - **基本原理**: 大部分重度及以上的听力损伤患者的问题在与内耳毛细胞(类似于听觉信号的实际感受器?)的破坏, 但实际上传导和解码声音电信号的神经细胞仍然可以正常工作, 可以通过直接电刺激这些神经细胞, 使其兴奋, 并诱发听觉皮层响应与恢复部分听力(与助听器的差别就是前者仍然是把声音信号发送给患者, 只是单纯放大了, 但人工耳蜗是直接绕过耳朵的接收部分直接把电信号发给神经了)
 - **工作原理**: 把声信号转换为电信号, 传送给语音处理器进行分析与数据解码, 再将信号通过无线射频发送给体内植入装置, 通过接收线圈将信号解调解码, 产生双相电脉冲并传送至电极, 刺激螺旋神经节细胞
 
-![alt text](/medinst/image-31.png)
+![alt text](/medinst/image-31.webp)
 
 人工耳蜗工作原理框图
 
@@ -804,7 +804,7 @@ P波同步起搏器的基本结构框图
 
 摄像机 -> 视频处理单元 -> 发射线圈 -> 无线传输 -> 接收芯片 -> 解码芯片 -> 微电极阵列
 
-![alt text](/medinst/image-32.png)
+![alt text](/medinst/image-32.webp)
 
 视网膜上假体基本原理框图
 
@@ -814,7 +814,7 @@ P波同步起搏器的基本结构框图
 
 微光电二极管阵列(MDPA植入视网膜与色素上皮层之间, 代替光感受细胞功能, 可以部分利用视网膜的信息处理功能
 
-![alt text](/medinst/image-33.png)
+![alt text](/medinst/image-33.webp)
 
 视网膜下假体基本原理框图
 
@@ -839,7 +839,7 @@ P波同步起搏器的基本结构框图
 - 作用机制: 诱发丘脑底核去极化阻滞, 激活抑制性神经回路, 使神经元去极化, 起抑制作用, 诱发神经网络混乱
 - 作用目的: 丘脑腹外侧核 -> 特发性震颤; 丘脑底核: 帕金森病与肌张力障碍; 苍白球内侧部: 帕金森病和肌张力障碍
 
-![alt text](/medinst/image-34.png)
+![alt text](/medinst/image-34.webp)
 
 DBS基本原理框图
 
@@ -863,7 +863,7 @@ DBS的优势: 非破坏性与可逆性, 可调节性, 安全性高, 并发症少
 
 膀胱起搏器(骶神经刺激器)植入于臀部并由导线连接到骶神经, 通过电刺激骶神经调节相关的反射, 使异常的神经反射重新达到平衡
 
-![alt text](/medinst/image-35.png)
+![alt text](/medinst/image-35.webp)
 
 #### 人工智能假肢
 
@@ -871,7 +871,7 @@ DBS的优势: 非破坏性与可逆性, 可调节性, 安全性高, 并发症少
 
 上行神经传导通路: 触觉温度等感受器通过感觉神经传导至大脑躯体感觉皮层
 
-![alt text](/medinst/image-36.png)
+![alt text](/medinst/image-36.webp)
 
 智能假肢中的反馈系统框图
 
@@ -891,7 +891,7 @@ DBS的优势: 非破坏性与可逆性, 可调节性, 安全性高, 并发症少
 
 10-100m, 3-30mhz, 会对目标部位产生涡电流(传导电流)继而生热, 主要作用于肌肉等电阻较小的组织的治疗
 
-![alt text](/medinst/image-37.png)
+![alt text](/medinst/image-37.webp)
 
 超短波治疗机框图
 

@@ -14,7 +14,7 @@ summary: 神人课程我说
 
 ## 架构概述
 
-![alt text](/emb_2/image.png)
+![alt text](/emb_2/image.webp)
 430的架构显然就要比51单片机要先进和复杂很多:
 
 - Unified Clock System: 其作为主要的时钟信号, 但其还可以输出频率不同的子时钟, 以实现不同元件不同功率, 达到更加节能的效果
@@ -24,14 +24,14 @@ summary: 神人课程我说
 
 ### CPU
 
-![alt text](/emb_2/image-1.png)
+![alt text](/emb_2/image-1.webp)
 前四个为特殊寄存器: R0/PC, R1/SP即类似于51的PC和SP, 而R2/SR类似于PSW, R3/CG2是一种常数生成器, 其可以以更快的速度产生例如0, 1, FF等常用常数
 
 其余就是通用寄存器
 
 ### Memory
 
-![alt text](/emb_2/image-2.png)
+![alt text](/emb_2/image-2.webp)
 
 与51单片机最大的区别在于统一编址
 
@@ -100,9 +100,9 @@ void main(void)
   while (1)
   {
     if (P4IN & BIT0)  // 当P4IN第0位为高电平时为true, 即按钮未被按下时
-    	P4OUT |= BIT5; // 将P4.5输出寄存器设置为高电平
+      P4OUT |= BIT5; // 将P4.5输出寄存器设置为高电平
     else
-     P4OUT &= ~BIT5; // 将P4.5
+      P4OUT &= ~BIT5; 
   }
 }
 ```
@@ -113,13 +113,13 @@ void main(void)
 
 相对而言MSP430的段式LCD比51的要先进一点, 当然也要复杂很多, 首先整体架构是这个LCD本身就有一个存储阵列, 然后外接的引脚会向这些存储阵列写入高低电平, 而某一段亮与否则与其对应的寄存器与外接的COM引脚的电压差有关.
 
-![alt text](/emb_2/image-3.png)
+![alt text](/emb_2/image-3.webp)
 
 我们可以看见LCD的显示存储是16个八位寄存器, 在这个图中, 仅一个COM端被启用, 此时每个寄存器只有两位可以获取与COM的电压差, 而每位会有一个对应控制的LCD段, 例如, 向09Ch中写入0x10, 则第三位的h段亮起, g段熄灭, 以此类推.
 
 为了提高利用率, 还有启用两个COM, 四个COM的模式, 在4COM模式下, 每一排八位寄存器就可以控制一位LCD数字, 即可以控制16位LCD七段管
 
-![alt text](/emb_2/image-4.png)
+![alt text](/emb_2/image-4.webp)
 
 (为什么不是a~h按顺序啊)
 

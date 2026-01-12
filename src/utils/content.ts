@@ -109,3 +109,16 @@ export async function getHotTags(len = 5) {
     })
     .slice(0, len)
 }
+
+import { site } from '@/config.json'
+
+/**
+ * 获取资源完整 URL
+ * 如果配置了 CDN 且是本地路径，则拼接 CDN 前缀
+ */
+export function getAssetUrl(path: string) {
+  if (path.startsWith('/') && site.cdn) {
+    return site.cdn + path
+  }
+  return path
+}
