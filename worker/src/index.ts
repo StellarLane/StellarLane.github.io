@@ -37,9 +37,9 @@ export default {
 		const headers = new Headers();
 		object.writeHttpMetadata(headers);
 		headers.set('etag', object.httpEtag);
-		// 缓存控制：一年
 		headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-
+		headers.set('Access-Control-Allow-Origin', 'https://stellarlane.github.io');
+		headers.set('Cache-Control', 'public, max-age=31536000');
 		return new Response(object.body, {
 			headers,
 		});
