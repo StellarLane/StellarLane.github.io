@@ -29,24 +29,25 @@ const friends = await getCollection('friends')
     ))
   }
 </ul>
-<div class="text-xs italic">
-  （顺序为随机生成）
-</div>
-
+<div class="text-xs italic">（顺序为随机生成）</div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  function shuffleFriends() {
     const list = document.getElementById('friend-list')
     if (!list) return
 
     const items = Array.from(list.children)
-    // 根据 Fisher-Yates 算法进行随机排序，比 sort 此方法更均匀
+    if (items.length <= 1) return
+
     for (let i = items.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       ;[items[i], items[j]] = [items[j], items[i]]
     }
 
-    // 重新附加 dom
     items.forEach((item) => list.appendChild(item))
-  })
+  }
+
+  shuffleFriends()
+
+  document.addEventListener('astro:after-swap', shuffleFriends)
 </script>
