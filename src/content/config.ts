@@ -31,7 +31,8 @@ const specCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    comments: z.boolean().default(true),
+    comments: z.boolean().default(false),
+    prefix: z.string().optional(),
   }),
 })
 

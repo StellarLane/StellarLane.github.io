@@ -1,12 +1,15 @@
 ---
-title: BME3308 嵌入式计算机系统与实验 MSP430部分
+title: 基于C的嵌入式开发入门[基于MSP430]
 category: BME
 tags:
   - 25sp
   - BME
+  - Class Notes
 date: 2025-07-27
 summary: 神人课程我说
 ---
+
+> 25spring BME3308 嵌入式计算机系统与实验的课程笔记
 
 > MSP430系列处理器由于在开发调试过程中往往使用软硬联调而非51单片机的keil+proteus软件仿真, 因此很多程序例子可能有硬件特异性
 >
@@ -102,7 +105,7 @@ void main(void)
     if (P4IN & BIT0)  // 当P4IN第0位为高电平时为true, 即按钮未被按下时
       P4OUT |= BIT5; // 将P4.5输出寄存器设置为高电平
     else
-      P4OUT &= ~BIT5; 
+      P4OUT &= ~BIT5;
   }
 }
 ```

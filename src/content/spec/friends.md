@@ -1,5 +1,6 @@
 ---
-title: 朋友们
+title: Friends
+prefix: 朋友们
 description: 人声潮涌，远处亮起的灯火恍如某种预兆。
 comments: false
 ---

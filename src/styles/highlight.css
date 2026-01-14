@@ -1,0 +1,55 @@
+@property --wipe-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes highlight-pop {
+    0% {
+        --wipe-angle: 0deg;
+    }
+    50% {
+        --wipe-angle: 330deg;
+    }
+    100% {
+        --wipe-angle: 360deg;
+    }
+}
+
+/* Utility class to apply the mask */
+.wheel-mask {
+    mask-image: conic-gradient(from 0deg at 50% 50%,
+            transparent 0deg,
+            transparent calc(360deg - var(--wipe-angle)),
+            black calc(360deg - var(--wipe-angle)),
+            black 360deg);
+    -webkit-mask-image: conic-gradient(from 0deg at 50% 50%,
+            transparent 0deg,
+            transparent calc(360deg - var(--wipe-angle)),
+            black calc(360deg - var(--wipe-angle)),
+            black 360deg);
+}
+
+@keyframes highlight-inner {
+    0% {
+        opacity: 0;
+        transform: translateX(5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes highlight-text {
+    0% {
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

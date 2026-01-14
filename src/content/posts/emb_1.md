@@ -1,12 +1,15 @@
 ---
-title: BME3308 嵌入式计算机系统与实验(AT89C51部分)
+title: 汇编嵌入式开发与嵌入式计算机系统简介[基于AT89C51]
 category: BME
 tags:
   - 25sp
   - BME
+  - Class Notes
 date: 2025-04-20
 summary: keil是真的难用
 ---
+
+>25spring BME3308 嵌入式计算机系统与实验的课程笔记
 
 ## 课程笔记
 

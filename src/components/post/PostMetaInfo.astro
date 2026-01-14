@@ -7,9 +7,10 @@ interface Props {
   words: number
   readingMinutes: number
   class?: string
+  category?: string
 }
 
-const { date, lastMod, words, readingMinutes, class: className } = Astro.props
+const { date, lastMod, words, readingMinutes, class: className, category } = Astro.props
 ---
 
 <div class="flex flex-wrap gap-2 text-sm text-secondary" class:list={[className]}>
@@ -18,6 +19,14 @@ const { date, lastMod, words, readingMinutes, class: className } = Astro.props
     <RelativeDate date={date} client:idle />
     {lastMod && <span class="text-xs">(已编辑)</span>}
   </div>
+  {
+    category && (
+      <div>
+        <i class="iconfont icon-folder" />
+        <span>{category ?? '未分类'}</span>
+      </div>
+    )
+  }
   <div>
     <i class="iconfont icon-file-list"></i>
     <span>{words} 字</span>

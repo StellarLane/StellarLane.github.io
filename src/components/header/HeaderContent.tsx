@@ -42,7 +42,7 @@ function AccessibleMenu() {
       <AnimatePresence>
         {shouldShow && (
           <motion.div
-            className="fixed z-10 top-12 inset-x-0 flex justify-center pointer-events-none"
+            className="fixed z-10 top-14 inset-x-0 flex justify-center pointer-events-none"
             initial={{ y: -20 }}
             animate={{ y: 0 }}
             exit={{ y: -20, opacity: 0 }}
@@ -73,17 +73,17 @@ function HeaderMenu({ isBgShow }: { isBgShow: boolean }) {
   return (
     <nav
       className={clsx('relative rounded-full group pointer-events-auto duration-100', {
-        'shadow-lg shadow-zinc-800/5 border border-primary bg-white/50 dark:bg-zinc-800/50 backdrop-blur':
+        'shadow-lg shadow-zinc-800/5  bg-white/50 dark:bg-zinc-800/50 backdrop-blur':
           isBgShow,
       })}
       onMouseMove={handleMouseMove}
     >
       <div
-        className="absolute -z-1 -inset-px rounded-full opacity-0 group-hover:opacity-100"
+        className="absolute -z-1 rounded-full opacity-0 group-hover:opacity-50"
         style={{ background }}
         aria-hidden
       ></div>
-      <div className="text-sm px-4 flex">
+      <div className="text-sm flex gap-1">
         {menus.map((menu) => (
           <HeaderMenuItem
             key={menu.name}
@@ -111,22 +111,27 @@ function HeaderMenuItem({
 }) {
   return (
     <a
-      className={clsx('relative block px-4 py-1.5', isActive ? 'text-accent' : 'hover:text-accent')}
+      className={clsx(
+        'relative block py-1.5 transition-all rounded-full duration-300 ease-out',
+        isActive
+          ? 'pl-2 pr-2 bg-accent/20 text-accent font-bold'
+          : 'px-6 hover:text-accent hover:bg-accent/5',
+      )}
       href={href}
     >
-      <div className="flex space-x-2">
+      <div className="flex items-center gap-2">
         {isActive && (
-          <motion.i
-            className={clsx('iconfont', icon)}
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-          ></motion.i>
+          <motion.div
+            className="flex items-center justify-center size-6 rounded-full bg-white dark:bg-zinc-800 shadow-sm"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          >
+            <i className={clsx('iconfont text-sm', icon)}></i>
+          </motion.div>
         )}
         <span>{title}</span>
       </div>
-      {isActive && (
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent"></div>
-      )}
     </a>
   )
 }

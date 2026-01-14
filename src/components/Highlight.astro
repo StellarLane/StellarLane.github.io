@@ -1,12 +1,96 @@
 ---
 interface Props {
   class?: string
+  prefix?: string
 }
 
-const { class: className } = Astro.props
+const { class: className, prefix } = Astro.props
 ---
 
-<span class="relative" class:list={[className]}
-  ><span class="absolute -z-1 top-[30%] left-0 w-full h-[40%] bg-accent/30 -rotate-3"></span><slot
-  /></span
->
+{
+  prefix ? (
+    <span
+      class:list={[
+        'group relative inline-flex flex-row items-center gap-1 rounded-full select-none',
+        className,
+      ]}
+    >
+      <span class="absolute inset-0 rounded-full border-2 border-accent/30 wheel-mask animate-[highlight-pop_1s_ease-out_both]" />
+      <span class="relative px-4 py-0.5 bg-accent/30 font-bold text-2xl rounded-full overflow-hidden animate-[highlight-inner_0.5s_ease-out_0.2s_both]">
+        <span
+          class="absolute inset-0 -translate-x-full"
+          style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);"
+        />
+        {prefix}
+      </span>
+      <span class="pr-3 text-accent font-bold text-2xl animate-[highlight-text_0.4s_ease-out_0.3s_both]">
+        <slot />
+      </span>
+    </span>
+  ) : (
+    <span class="relative px-2" class:list={[className]}>
+      <span class="absolute -z-1 top-[10%] left-0 w-full h-[80%] bg-accent/30 rounded-full" />
+      <slot />
+    </span>
+  )
+}
+
+<style>
+  @property --wipe-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  @keyframes highlight-pop {
+    0% {
+      --wipe-angle: 0deg;
+    }
+    50% {
+      --wipe-angle: 270deg;
+    }
+    100% {
+      --wipe-angle: 360deg;
+    }
+  }
+
+  /* Utility class to apply the mask */
+  .wheel-mask {
+    mask-image: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      transparent calc(360deg - var(--wipe-angle)),
+      black calc(360deg - var(--wipe-angle)),
+      black 360deg
+    );
+    -webkit-mask-image: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      transparent calc(360deg - var(--wipe-angle)),
+      black calc(360deg - var(--wipe-angle)),
+      black 360deg
+    );
+  }
+
+  @keyframes highlight-inner {
+    0% {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes highlight-text {
+    0% {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>

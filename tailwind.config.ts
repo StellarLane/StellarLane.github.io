@@ -9,13 +9,20 @@ const config: Config = {
         '"Noto Sans SC"',
         '"Source Han Sans SC"',
         'sans-serif',
+        '"Noto Color Emoji"',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
       ],
       serif: ['"Noto Serif SC"', '"Source Han Serif SC"', '"Source Han Serif"', 'serif'],
-      mono: ['"Go Mono", "Noto Serif SC", "JetBrains Mono"', '"Fira Code"', 'Consolas', 'monospace'],
+      mono: [
+        'Libertinus Mono',
+        '"Noto Serif SC"',
+        '"JetBrains Mono"',
+        '"Fira Code"',
+        'Consolas',
+        'monospace',
+      ],
     },
     fontSize: {
       xs: '0.75rem',
@@ -43,7 +50,7 @@ const config: Config = {
         secondary: 'rgb(var(--color-bg-secondary))',
       },
       borderColor: {
-        primary: 'rgb(var(--color-border-primary))',
+        primary: 'rgb(var(--color-bg-primary))',
       },
       minHeight: {
         main: 'calc(100vh - 125px)',

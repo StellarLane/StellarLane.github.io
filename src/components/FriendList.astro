@@ -4,12 +4,12 @@ import { getCollection } from 'astro:content'
 const friends = await getCollection('friends')
 ---
 
-<ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
+<ul id="friend-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
   {
     friends.map((friend) => (
       <li>
         <a href={friend.data.link} target="_blank" rel="noopener noreferrer external">
-          <div class="p-4 flex gap-2 bg-accent/10 rounded-lg group">
+          <div class="px-6 py-4 flex gap-2 bg-accent/10 rounded-full group">
             <img
               class="shrink-0 size-16 object-contain rounded-full"
               src={friend.data.avatar}
@@ -17,7 +17,7 @@ const friends = await getCollection('friends')
               loading="lazy"
             />
             <div class="min-w-0 grow">
-              <div class="truncate font-bold text-xl group-hover:text-accent">
+              <div class="truncate font-bold text-lg group-hover:text-accent">
                 {friend.data.title}
               </div>
               <div class="text-sm line-clamp-2">{friend.data.description}</div>
@@ -29,3 +29,24 @@ const friends = await getCollection('friends')
     ))
   }
 </ul>
+<div class="text-xs italic">
+  （顺序为随机生成）
+</div>
+
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const list = document.getElementById('friend-list')
+    if (!list) return
+
+    const items = Array.from(list.children)
+    // 根据 Fisher-Yates 算法进行随机排序，比 sort 此方法更均匀
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[items[i], items[j]] = [items[j], items[i]]
+    }
+
+    // 重新附加 dom
+    items.forEach((item) => list.appendChild(item))
+  })
+</script>

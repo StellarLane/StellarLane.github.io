@@ -42,6 +42,7 @@ const { remarkPluginFrontmatter } = await entry.render()
       lastMod={entry.data.lastMod}
       words={remarkPluginFrontmatter.words}
       readingMinutes={remarkPluginFrontmatter.readingMinutes}
+      category={entry.data.category}
     />
     <div class="group shrink-0 text-accent flex items-center gap-2">
       <span>继续阅读</span>

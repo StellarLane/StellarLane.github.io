@@ -1,12 +1,15 @@
 ---
-title: BME3311 医学仪器原理.min
+title: 医学仪器原理.min
 category: BME
 tags:
   - 25sp
   - BME
+  - Class Notes
 date: 2025-05-09
 summary: 省流版总结
 ---
+
+> 25Sping BME3311 医学仪器原理课程笔记
 
 > 理解, 掌握: 心电图机, 心脏起搏器
 >

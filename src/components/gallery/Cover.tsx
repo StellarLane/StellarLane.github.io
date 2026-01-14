@@ -59,14 +59,8 @@ export function Cover({
           </div>
         </div>
       </div>
-      <div className={`py-16 flex flex-col justify-center text-2xl font-extrabold items-center`}>
-        <Highlight className={`animate__animated animate__fadeInUp animate__faster`}>
-          {name}
-        </Highlight>
-
-        <div className="w-48 h-px bg-black/10 my-2"></div>
-
-        <div className={`animate__animated animate__fadeInDown animate__faster`}>{name_cn}</div>
+      <div className={`py-16 flex flex-col justify-center text-xl font-extrabold items-center`}>
+        <Highlight className={'text-lg'} prefix={name_cn}>{name}</Highlight>
       </div>
     </div>
   )

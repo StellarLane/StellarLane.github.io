@@ -1,12 +1,15 @@
 ---
-title: BME3311 医学仪器原理
+title: 医学仪器原理与构造
 category: BME
 tags:
   - 25sp
   - BME
+  - Class Notes
 date: 2025-05-08
 summary: 背多分科目, 你说折磨吧也确实挺折磨的, 但算平均workload那确实很小, 属于短痛型
 ---
+
+> 25Sping BME3311 医学仪器原理课程笔记
 
 ## 医学仪器简介
 

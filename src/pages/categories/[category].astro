@@ -37,7 +37,7 @@ const oldestPosts = await getOldestPosts().then((posts) => {
   <div class="max-w-[800px] mx-auto px-4 py-16">
     <header class="space-y-4 mb-8">
       <h1 class="text-4xl font-bold">
-        分类：<Highlight>{category.name}</Highlight>
+        <Highlight prefix="分类">{category.name}</Highlight>
       </h1>
       <p>共有 {category.count} 篇文章。</p>
     </header>

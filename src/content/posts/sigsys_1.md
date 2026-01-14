@@ -1,12 +1,15 @@
 ---
-title: BME2301 Biomedical Signals and Systems (I) (EN)
+title: Signals and Systems
 category: BME
 tags:
   - 25sp
   - BME
+  - Class Notes
 date: 2025-07-27
 summary: 好难学不懂 >.<
 ---
+
+> 25Sping BME2301 生物医学信号与系统（I）笔记
 
 ## Intro
 
