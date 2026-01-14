@@ -5,7 +5,7 @@ import path from 'path';
 import sharp from 'sharp';
 
 // === 配置区域 ===
-const TARGET_DIR = './public';      // 图片资源目录
+const TARGET_DIR = './public/image-pro';      // 图片资源目录
 const SOURCE_DIR = './src';         // 代码源码目录 (搜索这些文件里的引用)
 const DELETE_ORIGINAL = true;      // 是否删除原图 (建议先设为 false，确认替换无误后再改为 true)
 const ALLOWED_EXTS = ['.png', '.jpg', '.jpeg']; 

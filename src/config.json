@@ -71,24 +71,25 @@
   },
   "menus": [
     {
-      "name": "Home",
-      "link": "/",
-      "icon": "icon-pantone"
-    },
-    {
       "name": "Archives",
       "link": "/archives",
       "icon": "icon-archive"
     },
     {
-      "name": "Gallery",
-      "link": "/gallery",
-      "icon": "icon-heart"
-    },
-    {
       "name": "About",
       "link": "/about",
       "icon": "icon-ghost"
+    },
+    {
+      "name": "Home",
+      "link": "/",
+      "icon": "icon-pantone"
+    },
+
+    {
+      "name": "Gallery",
+      "link": "/gallery",
+      "icon": "icon-heart"
     },
     {
       "name": "Links",
