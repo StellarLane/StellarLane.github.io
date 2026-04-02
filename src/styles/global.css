@@ -2,7 +2,7 @@
 @import './shiki.css';
 @import './markdown.css';
 @import './signature.css';
-@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Noto+Serif+SC:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Libertinus+Mono&family=Noto+Serif+SC:wght@200..900&display=swap");
 
 ::selection {
   background-color: theme('colors.accent');
@@ -17,7 +17,7 @@ html {
   color: theme('textColor.primary');
   background-color: theme('backgroundColor.root');
   scroll-padding-top: 64px;
-  font-family: 'Noto Serif SC', serif;
+  font-family: theme('fontFamily.serif');
 }
 
 * {

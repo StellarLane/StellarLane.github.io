@@ -5,16 +5,20 @@ const config: Config = {
   darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
     fontFamily: {
-      sans: [
-        '"Noto Sans SC"',
-        '"Source Han Sans SC"',
-        'sans-serif',
-        '"Noto Color Emoji"',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
+      serif: [
+        '"Crimson Pro"',
+        '"Noto Serif SC"',
+        '"Source Han Serif SC"',
+        '"Source Han Serif"',
+        'serif',
       ],
-      serif: ['"Noto Serif SC"', '"Source Han Serif SC"', '"Source Han Serif"', 'serif'],
+      sans: [
+        '"Literata"',
+        '"Noto Serif SC"',
+        '"Source Han Serif SC"',
+        '"Source Han Serif"',
+        'serif',
+      ],
       mono: [
         'Libertinus Mono',
         '"Noto Serif SC"',
